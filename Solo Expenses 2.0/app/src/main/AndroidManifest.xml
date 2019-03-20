@@ -28,7 +28,7 @@
 
 
         <!--DashBoard screen-->
-        <activity android:name=".presentation.DashBoardActivity" />
+        <activity android:name=".presentation.activity.DashBoardActivity" />
 
 
     </application>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.DashBoardActivity">
+    tools:context=".presentation.activity.DashBoardActivity">
 
     <!--Header layout-->
     <RelativeLayout
@@ -74,7 +74,7 @@
             <!--Claim layout-->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_normal_nine_dp"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
@@ -95,10 +95,10 @@
                         android:text="CLAIM / PAY" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_view_claim"
+                        android:id="@+id/rv_claim"
                         android:layout_below="@+id/tv_claim"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content" />
 
                 </RelativeLayout>
 

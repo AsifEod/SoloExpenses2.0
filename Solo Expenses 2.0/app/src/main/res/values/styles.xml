@@ -55,32 +55,41 @@
     </style>
 
 
-    <!--text view large theme-->
+    <!--text view large Black default-->
     <style name="TextViewLargeStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/BlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_large</item>
     </style>
 
+    <!--text view large  off Black default-->
     <style name="TextViewLargeOffBlackStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/OffBlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_large</item>
     </style>
 
-    <!--text view Normal theme-->
+    <!--text view Normal Default black-->
     <style name="TextViewNormalStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/BlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--text view Normal Theme color -->
     <style name="TextViewNormalThemeColorStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/ThemePrimaryColor</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--text view Normal off black -->
     <style name="TextViewNormalOffBlackStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/OffBlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+
+    <!--text view actional count-->
+    <style name="TextViewExtraSmallActionalCountStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
 
 </resources>

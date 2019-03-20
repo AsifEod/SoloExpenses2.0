@@ -33,4 +33,5 @@
     <!--Dashboard screen-->
     <dimen name="note_icon_width_profile">18dp</dimen>
     <dimen name="name_prefix_width">40dp</dimen>
+    <dimen name="actional_count_size">10dp</dimen>
 </resources>

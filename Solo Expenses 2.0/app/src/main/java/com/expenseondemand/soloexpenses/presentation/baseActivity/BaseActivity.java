@@ -30,6 +30,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressWarnings("unchecked")
     protected <T extends ViewModel> T getViewModel(Class<T> modelClass) {
         ViewModelFactory factory = ViewModelFactory.getInstance();
 
