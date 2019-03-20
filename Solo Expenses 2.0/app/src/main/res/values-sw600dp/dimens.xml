@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="app_padding_left">30dp</dimen>
+    <dimen name="org_logo_width">130dp</dimen>
+
+    <!-- Common -->
+    <dimen name="margin_normal_five_dp">7dp</dimen>
+    <dimen name="margin_normal_ten_dp">15dp</dimen>
+    <dimen name="margin_normal_nine_dp">14dp</dimen>
+    <dimen name="margin_normal_twelve_dp">18dp</dimen>
+    <dimen name="text_standerd_small">16sp</dimen>
+    <dimen name="text_standerd_medium">20sp</dimen>
+    <dimen name="text_standerd_larg">22sp</dimen>
+    <dimen name="margin_normal_fifteen_dp">25dp</dimen>
+    <dimen name="margin_normal_twenty_dp">30dp</dimen>
+    <dimen name="margin_normal_twenty_five">32dp</dimen>
+    <dimen name="margin_normal_thierty">40dp</dimen>
+    <dimen name="margin_normal_one_dp">1.5dp</dimen>
+    <dimen name="margin_normal_two_dp">3dp</dimen>
+    <dimen name="margin_normal_three_dp">4dp</dimen>
+    <dimen name="app_view_elevation">2dp</dimen>
+
+    <!--Text Size-->
+    <dimen name="text_size_default_xsmall">14sp</dimen>
+    <dimen name="text_size_default_small">17sp</dimen>
+    <dimen name="text_size_default_normal">20sp</dimen>
+    <dimen name="text_size_default_large">22sp</dimen>
+    <dimen name="text_size_default_extra_large">24sp</dimen>
+
+
+
+    <!--Dashboard screen-->
+    <dimen name="note_icon_width_profile">18dp</dimen>
+    <dimen name="name_prefix_width">40dp</dimen>
+</resources>

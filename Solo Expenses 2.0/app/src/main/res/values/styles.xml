@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
+        <item name="android:textAppearance">@style/TextStyleBaseSolo</item>
+
+    </style>
+
+    <style name="SoloDefaultTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDefaultTheme</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDefaultTheme</item>
+        <item name="colorAccent">@color/colorAccentDefaultTheme</item>
+        <item name="android:checkboxStyle">@style/AppCheckBox</item>
+        <item name="ThemePrimaryColor">@color/colorPrimaryDefaultTheme</item>
+        <item name="BlackTextDefault">#090909</item> <!--custom created color attribute-->
+        <item name="OffBlackTextDefault">#3a3b3a</item>
+    </style>
+
+
+    <!--Below is just a sample for how we can change extend base theme and change theme-->
+    <!--<style name="SoloAnyOtherThemeFormat" parent="AppTheme">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">#9E9E9E</item>-->
+        <!--<item name="colorPrimaryDark">#757575</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <!--<item name="DefaultTextColor">#999999</item>-->
+    <!--</style>-->
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+
+    <style name="AppCheckBox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <!--<item name="buttonTint">@color/darker_green</item>-->
+    </style>
+
+
+    <!--*********************************TEXT VIEW STYLES*******************************************-->
+
+    <!--Base TextView style-->
+    <style name="TextStyleBaseSolo" parent="TextAppearance.AppCompat">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+    <!--text view large theme-->
+    <style name="TextViewLargeStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/BlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_large</item>
+    </style>
+
+    <style name="TextViewLargeOffBlackStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/OffBlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_large</item>
+    </style>
+
+    <!--text view Normal theme-->
+    <style name="TextViewNormalStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/BlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+    <style name="TextViewNormalThemeColorStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/ThemePrimaryColor</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+    <style name="TextViewNormalOffBlackStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/OffBlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+
+</resources>
