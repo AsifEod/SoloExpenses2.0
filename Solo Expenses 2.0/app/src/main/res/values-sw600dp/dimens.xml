@@ -9,9 +9,6 @@
     <dimen name="margin_normal_ten_dp">15dp</dimen>
     <dimen name="margin_normal_nine_dp">14dp</dimen>
     <dimen name="margin_normal_twelve_dp">18dp</dimen>
-    <dimen name="text_standerd_small">16sp</dimen>
-    <dimen name="text_standerd_medium">20sp</dimen>
-    <dimen name="text_standerd_larg">22sp</dimen>
     <dimen name="margin_normal_fifteen_dp">25dp</dimen>
     <dimen name="margin_normal_twenty_dp">30dp</dimen>
     <dimen name="margin_normal_twenty_five">32dp</dimen>
@@ -22,6 +19,7 @@
     <dimen name="app_view_elevation">2dp</dimen>
 
     <!--Text Size-->
+    <dimen name="text_size_default_8sp">10sp</dimen>
     <dimen name="text_size_default_xsmall">14sp</dimen>
     <dimen name="text_size_default_small">17sp</dimen>
     <dimen name="text_size_default_normal">20sp</dimen>
@@ -34,4 +32,5 @@
     <dimen name="note_icon_width_profile">18dp</dimen>
     <dimen name="name_prefix_width">40dp</dimen>
     <dimen name="actional_count_size">10dp</dimen>
+    <dimen name="dashboard_menu_icon_size">34dp</dimen>
 </resources>

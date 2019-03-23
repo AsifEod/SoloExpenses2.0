@@ -12,9 +12,10 @@ public class DashBoardManager {
 
         List<DashBoardMenuModel> list = new ArrayList<>();
 
-        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE));
-        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE));
-        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE));
+        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE,0));
+        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE,0));
+        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE,1));
+        list.add(new DashBoardMenuModel(R.drawable.create_expense_vector, "Expense", DashBoardActivity.Menu.CREATE_EXPENSE,12));
         return list;
     }
 

@@ -9,10 +9,11 @@ public class DashBoardMenuModel {
     private DashBoardActivity.Menu menuType;
     private int ActionCount = 0;
 
-    public DashBoardMenuModel(int iconResourceId, String menuName, DashBoardActivity.Menu menuType) {
+    public DashBoardMenuModel(int iconResourceId, String menuName, DashBoardActivity.Menu menuType, int actionCount) {
         this.iconResourceId = iconResourceId;
         this.menuName = menuName;
         this.menuType = menuType;
+        ActionCount = actionCount;
     }
 
     public int getIconResourceId() {

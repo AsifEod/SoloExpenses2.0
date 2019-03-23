@@ -19,12 +19,12 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private List<DashBoardMenuModel> list;
-    private int recyclerviewWidth = 0;
+    private int recyclerViewWidth;
 
 
-    public DashBoardMenuAdapter(List<DashBoardMenuModel> list, int recyclerviewWidth) {
+    public DashBoardMenuAdapter(List<DashBoardMenuModel> list, int recyclerViewWidth) {
         this.list = list;
-        this.recyclerviewWidth = recyclerviewWidth;
+        this.recyclerViewWidth = recyclerViewWidth;
     }
 
     @NonNull
@@ -39,9 +39,13 @@ public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
 
         if (holder instanceof ViewHolder) {
             DashBoardMenuModel menuModel = list.get(position);
+            int count = menuModel.getActionCount();
+            int visibility = (count < 1) ? View.INVISIBLE : View.VISIBLE;
 
             ((ViewHolder) holder).iv_icon.setImageResource(menuModel.getIconResourceId());
-            ((ViewHolder) holder).tv_action_count.setText(menuModel.getActionCount() + "");
+            ((ViewHolder) holder).tv_action_count.setVisibility(visibility);
+            if(!(count < 1))
+            ((ViewHolder) holder).tv_action_count.setText(count + "");
             ((ViewHolder) holder).tv_menu_label.setText(menuModel.getMenuName());
         }
 
@@ -63,7 +67,8 @@ public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
             tv_menu_label = itemView.findViewById(R.id.tv_menu_label);
             tv_action_count = itemView.findViewById(R.id.tv_action_count);
             iv_icon = itemView.findViewById(R.id.iv_icon);
-            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(recyclerviewWidth / 4, RelativeLayout.LayoutParams.WRAP_CONTENT);
+            // to have 4 items only at a time
+            FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(recyclerViewWidth / 4, RelativeLayout.LayoutParams.WRAP_CONTENT);
             itemView.setLayoutParams(params);
         }
 

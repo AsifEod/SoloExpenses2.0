@@ -19,6 +19,17 @@
         <item name="OffBlackTextDefault">#3a3b3a</item>
     </style>
 
+    <!--Just for test-->
+    <!--<style name="SoloRedTheme" parent="AppTheme">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">#ff1744</item>-->
+        <!--<item name="colorPrimaryDark">#d50000</item>-->
+        <!--<item name="colorAccent">#ff5252</item>-->
+        <!--<item name="android:checkboxStyle">@style/AppCheckBox</item>-->
+        <!--<item name="ThemePrimaryColor">#ff1744</item>-->
+        <!--<item name="BlackTextDefault">#d32f2f</item> &lt;!&ndash;custom created color attribute&ndash;&gt;-->
+        <!--<item name="OffBlackTextDefault">#e57373</item>-->
+    <!--</style>-->
 
     <!--Below is just a sample for how we can change extend base theme and change theme-->
     <!--<style name="SoloAnyOtherThemeFormat" parent="AppTheme">-->
@@ -47,6 +58,11 @@
     </style>
 
 
+    <!--*********************************IMAGE VIEW STYLES*******************************************-->
+    <style name="ThemeIconColor">
+        <item name="android:tint">?attr/ThemePrimaryColor</item>
+    </style>
+
     <!--*********************************TEXT VIEW STYLES*******************************************-->
 
     <!--Base TextView style-->
@@ -73,6 +89,12 @@
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--text view Small Default black-->
+    <style name="TextViewSmallStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/BlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
     <!--text view Normal Theme color -->
     <style name="TextViewNormalThemeColorStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/ThemePrimaryColor</item>
@@ -85,11 +107,17 @@
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--text view Small off black -->
+    <style name="TextViewSmallOffBlackStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/OffBlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
 
     <!--text view actional count-->
     <style name="TextViewExtraSmallActionalCountStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">@color/white</item>
-        <item name="android:textSize">@dimen/text_size_default_small</item>
+        <item name="android:textSize">@dimen/text_size_default_8sp</item>
     </style>
 
 </resources>
