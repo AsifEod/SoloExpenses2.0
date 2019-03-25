@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.expenseondemand.soloexpenses.R;
+import com.expenseondemand.soloexpenses.presentation.activity.DashBoardActivity;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
 
 import java.util.List;
@@ -18,13 +19,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
+    public interface DashboardMenuAdapterListener {
+        void onDashboardItemClick(DashBoardActivity.Menu item);
+    }
+
     private List<DashBoardMenuModel> list;
     private int recyclerViewWidth;
+    private DashboardMenuAdapterListener listener;
 
-
-    public DashBoardMenuAdapter(List<DashBoardMenuModel> list, int recyclerViewWidth) {
+    public DashBoardMenuAdapter(List<DashBoardMenuModel> list, int recyclerViewWidth, DashboardMenuAdapterListener listener) {
         this.list = list;
         this.recyclerViewWidth = recyclerViewWidth;
+        this.listener = listener;
     }
 
     @NonNull
@@ -44,8 +50,8 @@ public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
 
             ((ViewHolder) holder).iv_icon.setImageResource(menuModel.getIconResourceId());
             ((ViewHolder) holder).tv_action_count.setVisibility(visibility);
-            if(!(count < 1))
-            ((ViewHolder) holder).tv_action_count.setText(count + "");
+            if (!(count < 1))
+                ((ViewHolder) holder).tv_action_count.setText(count + "");
             ((ViewHolder) holder).tv_menu_label.setText(menuModel.getMenuName());
         }
 
@@ -70,6 +76,12 @@ public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
             // to have 4 items only at a time
             FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(recyclerViewWidth / 4, RelativeLayout.LayoutParams.WRAP_CONTENT);
             itemView.setLayoutParams(params);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onDashboardItemClick(list.get(getAdapterPosition()).getMenuType());
+                }
+            });
         }
 
     }

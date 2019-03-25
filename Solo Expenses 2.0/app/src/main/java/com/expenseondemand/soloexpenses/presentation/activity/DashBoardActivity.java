@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DashBoardActivity extends BaseActivity {
+public class DashBoardActivity extends BaseActivity implements DashBoardMenuAdapter.DashboardMenuAdapterListener {
 
     @BindView(R.id.rv_claim)
     RecyclerView rv_claim;
@@ -45,6 +45,7 @@ public class DashBoardActivity extends BaseActivity {
     View reimburse_layout;
 
     private DashBoardManager dashBoardManager = new DashBoardManager();
+
 
     // These enums will help in generic recyclerview for dashboard menu options
     public enum Menu {
@@ -116,8 +117,22 @@ public class DashBoardActivity extends BaseActivity {
             parentLayout.setVisibility(View.GONE);
         } else {
             parentLayout.setVisibility(View.VISIBLE);
-            recyclerView.setAdapter(new DashBoardMenuAdapter(menuModelList, recyclerView.getWidth()));
+            recyclerView.setAdapter(new DashBoardMenuAdapter(menuModelList, recyclerView.getWidth(), this));
         }
+    }
+
+
+    @Override
+    public void onDashboardItemClick(Menu item) {
+        switch (item) {
+            case CREATE_EXPENSE:
+                handleCreateExpense();
+                break;
+        }
+    }
+
+    private void handleCreateExpense() {
+
     }
 
 }
