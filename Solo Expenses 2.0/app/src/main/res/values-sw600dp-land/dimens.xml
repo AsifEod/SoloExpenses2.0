@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <dimen name="app_padding_left">30dp</dimen>
+    <dimen name="dashboard_padding_left_right">30dp</dimen>
 
     <!--Text Size-->
     <dimen name="text_size_default_normal">20sp</dimen>

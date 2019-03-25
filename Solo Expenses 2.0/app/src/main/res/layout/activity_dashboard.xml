@@ -15,10 +15,10 @@
         android:background="@color/white"
         android:clipToPadding="false"
         android:elevation="@dimen/app_view_elevation"
-        android:paddingStart="@dimen/app_padding_left"
-        android:paddingTop="@dimen/margin_normal_twelve_dp"
-        android:paddingEnd="@dimen/margin_normal_ten_dp"
-        android:paddingBottom="@dimen/margin_normal_twelve_dp">
+        android:paddingStart="@dimen/dashboard_padding_left_right"
+        android:paddingTop="@dimen/margin_normal_fifteen_dp"
+        android:paddingEnd="@dimen/dashboard_padding_left_right"
+        android:paddingBottom="@dimen/margin_normal_fifteen_dp">
 
         <ImageView
             android:id="@+id/iv_organization_logo"
@@ -69,14 +69,15 @@
         <!--scroll view single child-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dashboard_padding_left_right">
 
             <!--Claim layout-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/claim_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_normal_nine_dp"
+                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -113,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/claim_layout"
-                android:layout_margin="@dimen/margin_normal_nine_dp"
+                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -151,7 +152,7 @@
                 android:layout_below="@+id/list_action_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_normal_nine_dp"
+                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -190,7 +191,7 @@
                 android:layout_below="@id/approve_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/margin_normal_nine_dp"
+                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 

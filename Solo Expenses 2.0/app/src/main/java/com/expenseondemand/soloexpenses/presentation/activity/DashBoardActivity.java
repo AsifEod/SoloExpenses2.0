@@ -35,7 +35,7 @@ public class DashBoardActivity extends BaseActivity {
 
     // These enums will help in generic recyclerview for dashboard menu options
     public enum Menu {
-        CREATE_EXPENSE, RECEIPT, MILEAGE, EXPENSE_LIST, CHARTS, APPROVER_EXPENSE_LIST, REIMBURSE_EXPENSE_LIST
+        CREATE_EXPENSE, RECEIPT, MILEAGE, ADVANCES_REQUEST, ADVANCE_LIST, EXPENSE_LIST, CHARTS, APPROVER_EXPENSE_LIST, REIMBURSE_EXPENSE_LIST
     }
 
     private DashBoardViewModel dashBoardViewModel;
@@ -71,7 +71,7 @@ public class DashBoardActivity extends BaseActivity {
             @Override
             public void onGlobalLayout() {
                 rv_list_action.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                updateMenu(dashBoardManager.getDashboardForClaim(), rv_list_action);
+                updateMenu(dashBoardManager.getDashboardMenuForListAndAction(), rv_list_action);
             }
         });
 
