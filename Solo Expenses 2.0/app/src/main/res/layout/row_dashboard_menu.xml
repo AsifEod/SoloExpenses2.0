@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true">
-
-        <ImageView
-            android:id="@+id/iv_icon"
-            android:layout_width="@dimen/dashboard_menu_icon_size"
-            android:layout_height="@dimen/dashboard_menu_icon_size"
-            android:adjustViewBounds="true"
-            android:contentDescription="@null"
-            style="@style/ThemeIconColor"
-            android:padding="3dp"
-            app:srcCompat="@drawable/create_expense_vector" />
-
-        <TextView
-            android:id="@+id/tv_action_count"
-            style="@style/TextViewExtraSmallActionalCountStyle"
-            android:layout_width="@dimen/actional_count_size"
-            android:layout_height="@dimen/actional_count_size"
-            android:layout_gravity="end|top"
-            android:background="@drawable/actional_count_circle"
-            android:gravity="center"
-            tools:text="1" />
-
-    </FrameLayout>
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
 
 
-    <TextView
-        android:id="@+id/tv_menu_label"
-        style="@style/TextViewSmallOffBlackStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/frame_layout"
-        android:layout_centerHorizontal="true"
-        tools:text="Expense" />
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                style="@style/ThemeIconColor"
+                android:layout_width="@dimen/dashboard_menu_icon_size"
+                android:layout_height="@dimen/dashboard_menu_icon_size"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/create_expense_vector" />
+
+
+            <TextView
+                android:id="@+id/tv_menu_label"
+                style="@style/TextViewSmallOffBlackStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                tools:text="Expense" />
+
+            <TextView
+                android:id="@+id/tv_action_count"
+                style="@style/TextViewExtraSmallActionalCountStyle"
+                android:layout_width="@dimen/actional_count_size"
+                android:layout_height="@dimen/actional_count_size"
+                android:layout_marginTop="@dimen/margin_normal_nine_dp"
+                android:layout_toEndOf="@+id/iv_icon"
+                android:background="@drawable/actional_count_circle"
+                android:gravity="center"
+                tools:text="1" />
+
+
+        </RelativeLayout>
+
+
+
+</FrameLayout>

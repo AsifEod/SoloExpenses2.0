@@ -101,6 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_claim"
+                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
                         android:layout_marginBottom="@dimen/margin_normal_two_dp" />
 
                 </RelativeLayout>
@@ -138,6 +139,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_list_action"
+                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
                         android:layout_marginBottom="@dimen/margin_normal_two_dp" />
 
                 </RelativeLayout>
@@ -176,6 +178,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_approve"
+                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
                         android:layout_marginBottom="@dimen/margin_normal_two_dp" />
 
                 </RelativeLayout>
@@ -215,6 +218,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_reimburse"
+                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
                         android:layout_marginBottom="@dimen/margin_normal_two_dp" />
 
                 </RelativeLayout>

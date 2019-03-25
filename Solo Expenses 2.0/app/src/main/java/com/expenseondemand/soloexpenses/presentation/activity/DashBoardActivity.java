@@ -1,6 +1,7 @@
 package com.expenseondemand.soloexpenses.presentation.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.ViewTreeObserver;
 
 import com.expenseondemand.soloexpenses.R;
@@ -30,6 +31,18 @@ public class DashBoardActivity extends BaseActivity {
 
     @BindView(R.id.rv_reimburse)
     RecyclerView rv_reimburse;
+
+    @BindView(R.id.claim_layout)
+    View claim_layout;
+
+    @BindView(R.id.list_action_layout)
+    View list_action_layout;
+
+    @BindView(R.id.approve_layout)
+    View approve_layout;
+
+    @BindView(R.id.reimburse_layout)
+    View reimburse_layout;
 
     private DashBoardManager dashBoardManager = new DashBoardManager();
 
@@ -61,7 +74,7 @@ public class DashBoardActivity extends BaseActivity {
             @Override
             public void onGlobalLayout() {
                 rv_claim.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                updateMenu(dashBoardManager.getDashboardForClaim(), rv_claim);
+                updateMenu(claim_layout, dashBoardManager.getDashboardForClaim(), rv_claim);
             }
         });
 
@@ -71,7 +84,7 @@ public class DashBoardActivity extends BaseActivity {
             @Override
             public void onGlobalLayout() {
                 rv_list_action.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                updateMenu(dashBoardManager.getDashboardMenuForListAndAction(), rv_list_action);
+                updateMenu(list_action_layout, dashBoardManager.getDashboardMenuForListAndAction(), rv_list_action);
             }
         });
 
@@ -81,7 +94,7 @@ public class DashBoardActivity extends BaseActivity {
             @Override
             public void onGlobalLayout() {
                 rv_approve.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                updateMenu(dashBoardManager.getDashboardForClaim(), rv_approve);
+                updateMenu(approve_layout, dashBoardManager.getDashboardMenuForApprove(), rv_approve);
             }
         });
 
@@ -91,15 +104,20 @@ public class DashBoardActivity extends BaseActivity {
             @Override
             public void onGlobalLayout() {
                 rv_reimburse.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                updateMenu(dashBoardManager.getDashboardForClaim(), rv_reimburse);
+                updateMenu(reimburse_layout, dashBoardManager.getDashboardMenuForReimburse(), rv_reimburse);
             }
         });
 
 
     }
 
-    private void updateMenu(List<DashBoardMenuModel> claimAndPayMenuList, RecyclerView recyclerView) {
-        recyclerView.setAdapter(new DashBoardMenuAdapter(claimAndPayMenuList, recyclerView.getWidth()));
+    private void updateMenu(View parentLayout, List<DashBoardMenuModel> menuModelList, RecyclerView recyclerView) {
+        if (menuModelList.isEmpty()) {
+            parentLayout.setVisibility(View.GONE);
+        } else {
+            parentLayout.setVisibility(View.VISIBLE);
+            recyclerView.setAdapter(new DashBoardMenuAdapter(menuModelList, recyclerView.getWidth()));
+        }
     }
 
 }

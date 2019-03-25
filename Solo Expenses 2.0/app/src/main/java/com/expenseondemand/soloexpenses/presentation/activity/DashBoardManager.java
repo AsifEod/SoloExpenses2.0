@@ -23,9 +23,20 @@ public class DashBoardManager {
         List<DashBoardMenuModel> list = new ArrayList<>();
 
         list.add(new DashBoardMenuModel(R.drawable.expenses_icon_vector, "Expenses", DashBoardActivity.Menu.EXPENSE_LIST,12));
+        list.add(new DashBoardMenuModel(R.drawable.advances_icon_vector, "Advances", DashBoardActivity.Menu.ADVANCE_LIST,0));
         list.add(new DashBoardMenuModel(R.drawable.charts_icon_vector, "Charts", DashBoardActivity.Menu.CHARTS,0));
-        list.add(new DashBoardMenuModel(R.drawable.advances_icon_vector, "Advances", DashBoardActivity.Menu.ADVANCE_LIST,2));
         return list;
     }
 
+    public List<DashBoardMenuModel> getDashboardMenuForApprove(){
+        List<DashBoardMenuModel> list = new ArrayList<>();
+
+        return list;
+    }
+
+    public List<DashBoardMenuModel> getDashboardMenuForReimburse(){
+        List<DashBoardMenuModel> list = new ArrayList<>();
+
+        return list;
+    }
 }
