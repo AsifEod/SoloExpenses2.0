@@ -1,10 +1,12 @@
 package com.expenseondemand.soloexpenses.presentation.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
 import com.expenseondemand.soloexpenses.R;
+import com.expenseondemand.soloexpenses.base.AppConstants;
 import com.expenseondemand.soloexpenses.presentation.adapters.DashBoardMenuAdapter;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
@@ -133,6 +135,15 @@ public class DashBoardActivity extends BaseActivity implements DashBoardMenuAdap
 
     private void handleCreateExpense() {
 
+        if(AppConstants.APP_THEME == AppConstants.Theme.Default) {
+            AppConstants.APP_THEME = AppConstants.Theme.RED;
+        }
+        else{
+            AppConstants.APP_THEME = AppConstants.Theme.Default;
+        }
+        finish();
+        Intent intent = new Intent(this, DashBoardActivity.class);
+        startActivity(intent);
     }
 
 }

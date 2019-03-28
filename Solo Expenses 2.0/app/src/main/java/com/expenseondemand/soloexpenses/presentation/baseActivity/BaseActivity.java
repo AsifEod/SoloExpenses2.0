@@ -27,6 +27,9 @@ public abstract class BaseActivity extends AppCompatActivity {
             case Default:
                 setTheme(R.style.SoloDefaultTheme);
                 break;
+            case RED:
+                setTheme(R.style.SoloRedTheme);
+                break;
         }
     }
 

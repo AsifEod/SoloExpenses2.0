@@ -38,5 +38,7 @@ dependencies {
     implementation "com.jakewharton:butterknife:$butterknifeVersion"
     annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
 
+    // SDP - a scalable size unit
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
 
 }
