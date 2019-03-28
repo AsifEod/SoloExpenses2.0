@@ -15,14 +15,14 @@
         android:background="@color/white"
         android:clipToPadding="false"
         android:elevation="@dimen/app_view_elevation"
-        android:paddingStart="@dimen/dashboard_padding_left_right"
-        android:paddingTop="@dimen/margin_normal_fifteen_dp"
-        android:paddingEnd="@dimen/dashboard_padding_left_right"
-        android:paddingBottom="@dimen/margin_normal_fifteen_dp">
+        android:paddingStart="@dimen/dashboard_header_padding_left_right"
+        android:paddingTop="@dimen/dashboard_header_padding_top_bottom"
+        android:paddingEnd="@dimen/dashboard_header_padding_left_right"
+        android:paddingBottom="@dimen/dashboard_header_padding_top_bottom">
 
         <ImageView
             android:id="@+id/iv_organization_logo"
-            android:layout_width="@dimen/org_logo_width"
+            android:layout_width="@dimen/dashboard_org_logo_width"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
@@ -37,8 +37,8 @@
             <TextView
                 android:id="@+id/tv_username_prefix"
                 style="@style/TextViewNormalThemeColorStyle"
-                android:layout_width="@dimen/name_prefix_width"
-                android:layout_height="@dimen/name_prefix_width"
+                android:layout_width="@dimen/dashboard_name_prefix_size"
+                android:layout_height="@dimen/dashboard_name_prefix_size"
                 android:layout_toStartOf="@+id/iv_note_profile"
                 android:background="@drawable/profile_name_circle"
                 android:gravity="center"
@@ -47,11 +47,11 @@
 
             <ImageView
                 android:id="@+id/iv_note_profile"
-                android:layout_width="@dimen/note_icon_width_profile"
-                android:layout_height="@dimen/note_icon_width_profile"
+                android:layout_width="@dimen/dashboard_note_icon_size"
+                android:layout_height="@dimen/dashboard_note_icon_size"
                 android:layout_alignTop="@+id/tv_username_prefix"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="-8dp"
+                android:layout_marginStart="@dimen/dashboard_note_icon_left_margin"
                 app:srcCompat="@drawable/note_icon_vector" />
         </RelativeLayout>
 
@@ -70,14 +70,14 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/dashboard_padding_left_right">
+            android:padding="@dimen/dashboard_header_padding_left_right">
 
             <!--Claim layout-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/claim_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -90,10 +90,9 @@
                         style="@style/TextViewNormalStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginTop="@dimen/margin_normal_two_dp"
-                        android:layout_marginEnd="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
                         android:text="CLAIM / PAY" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -101,9 +100,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_claim"
-                        android:layout_marginTop="@dimen/margin_normal_five_dp"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp" />
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
 
                 </RelativeLayout>
 
@@ -116,7 +114,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/claim_layout"
-                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -129,10 +127,9 @@
                         style="@style/TextViewNormalStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginTop="@dimen/margin_normal_two_dp"
-                        android:layout_marginEnd="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
                         android:text="LIST &amp; ACTION" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -140,8 +137,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_list_action"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp" />
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
 
                 </RelativeLayout>
 
@@ -155,7 +152,7 @@
                 android:layout_below="@+id/list_action_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -168,10 +165,9 @@
                         style="@style/TextViewNormalStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginTop="@dimen/margin_normal_two_dp"
-                        android:layout_marginEnd="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
                         android:text="APRROVE" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -179,8 +175,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_approve"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp" />
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
 
                 </RelativeLayout>
 
@@ -195,7 +191,7 @@
                 android:layout_below="@id/approve_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dashboard_padding_left_right"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -208,10 +204,9 @@
                         style="@style/TextViewNormalStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginTop="@dimen/margin_normal_two_dp"
-                        android:layout_marginEnd="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
                         android:text="REIMBURSE" />
 
                     <androidx.recyclerview.widget.RecyclerView
@@ -219,8 +214,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/tv_reimburse"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp" />
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
 
                 </RelativeLayout>
 

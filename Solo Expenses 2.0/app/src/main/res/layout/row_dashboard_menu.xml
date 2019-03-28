@@ -14,8 +14,8 @@
             <ImageView
                 android:id="@+id/iv_icon"
                 style="@style/ThemeIconColor"
-                android:layout_width="@dimen/dashboard_menu_icon_size"
-                android:layout_height="@dimen/dashboard_menu_icon_size"
+                android:layout_width="@dimen/dashboard_row_icon_size"
+                android:layout_height="@dimen/dashboard_row_icon_size"
                 android:layout_centerHorizontal="true"
                 android:adjustViewBounds="true"
                 android:contentDescription="@null"
@@ -29,14 +29,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/iv_icon"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/margin_normal_three_dp"
+                android:layout_marginTop="@dimen/_1sdp"
                 tools:text="Expense" />
 
             <TextView
                 android:id="@+id/tv_action_count"
                 style="@style/TextViewExtraSmallActionalCountStyle"
-                android:layout_width="@dimen/actional_count_size"
-                android:layout_height="@dimen/actional_count_size"
+                android:layout_width="@dimen/actionable_count_icon_size"
+                android:layout_height="@dimen/actionable_count_icon_size"
                 android:layout_toEndOf="@+id/iv_icon"
                 android:background="@drawable/actional_count_circle"
                 android:gravity="center"
