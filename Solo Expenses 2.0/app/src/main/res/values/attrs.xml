@@ -13,4 +13,6 @@
     <attr name="BlackTextDefault" format="reference|color"/>
     <attr name="OffBlackTextDefault" format="reference|color"/>
     <attr name="ThemePrimaryColor" format="reference|color"/>
+    <attr name="WhiteTextDefaultColor" format="reference|color"/>
+
 </resources>

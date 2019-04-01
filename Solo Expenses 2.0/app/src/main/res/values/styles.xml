@@ -17,6 +17,7 @@
         <item name="ThemePrimaryColor">@color/colorPrimaryDefaultTheme</item>
         <item name="BlackTextDefault">#090909</item> <!--custom created color attribute-->
         <item name="OffBlackTextDefault">#3a3b3a</item>
+        <item name="WhiteTextDefaultColor">#ffffff</item>
     </style>
 
     <!--Just for test-->
@@ -29,15 +30,16 @@
         <item name="ThemePrimaryColor">#ff1744</item>
         <item name="BlackTextDefault">#4ef442</item> <!--custom created color attribute-->
         <item name="OffBlackTextDefault">#f441eb</item>
+        <item name="WhiteTextDefaultColor">#4ef442</item>
     </style>
 
     <!--Below is just a sample for how we can change extend base theme and change theme-->
     <!--<style name="SoloAnyOtherThemeFormat" parent="AppTheme">-->
-        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-        <!--<item name="colorPrimary">#9E9E9E</item>-->
-        <!--<item name="colorPrimaryDark">#757575</item>-->
-        <!--<item name="colorAccent">@color/colorAccent</item>-->
-        <!--<item name="DefaultTextColor">#999999</item>-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">#9E9E9E</item>-->
+    <!--<item name="colorPrimaryDark">#757575</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="DefaultTextColor">#999999</item>-->
     <!--</style>-->
 
     <style name="FullscreenTheme" parent="AppTheme">
@@ -61,6 +63,10 @@
     <!--*********************************IMAGE VIEW STYLES*******************************************-->
     <style name="ThemeIconColor">
         <item name="android:tint">?attr/ThemePrimaryColor</item>
+    </style>
+
+    <style name="ToolbarElementColor">
+        <item name="android:tint">?attr/WhiteTextDefaultColor</item>
     </style>
 
     <!--*********************************TEXT VIEW STYLES*******************************************-->
@@ -87,6 +93,11 @@
     <style name="TextViewNormalStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/BlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+    <style name="TextViewWhiteLargeStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/WhiteTextDefaultColor</item>
+        <item name="android:textSize">@dimen/text_size_default_large</item>
     </style>
 
     <!--text view Small Default black-->

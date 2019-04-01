@@ -135,15 +135,18 @@ public class DashBoardActivity extends BaseActivity implements DashBoardMenuAdap
 
     private void handleCreateExpense() {
 
-        if(AppConstants.APP_THEME == AppConstants.Theme.Default) {
-            AppConstants.APP_THEME = AppConstants.Theme.RED;
-        }
-        else{
-            AppConstants.APP_THEME = AppConstants.Theme.Default;
-        }
-        finish();
-        Intent intent = new Intent(this, DashBoardActivity.class);
+        Intent intent = SelectCategoryActivity.getSelectCategoryActivityIntent(this);
         startActivity(intent);
+
+//        if(AppConstants.APP_THEME == AppConstants.Theme.Default) {
+//            AppConstants.APP_THEME = AppConstants.Theme.RED;
+//        }
+//        else{
+//            AppConstants.APP_THEME = AppConstants.Theme.Default;
+//        }
+//        finish();
+//        Intent intent = new Intent(this, DashBoardActivity.class);
+//        startActivity(intent);
     }
 
 }
