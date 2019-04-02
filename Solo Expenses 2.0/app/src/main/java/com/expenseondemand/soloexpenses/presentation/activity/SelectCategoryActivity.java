@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.expenseondemand.soloexpenses.R;
 import com.expenseondemand.soloexpenses.base.AppConstants;
 import com.expenseondemand.soloexpenses.domain.entities.CategoryModel;
+import com.expenseondemand.soloexpenses.domain.manager.ExpenseIntentManager;
 import com.expenseondemand.soloexpenses.presentation.adapters.AdapterSelectCategory;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 
@@ -29,7 +30,7 @@ public class SelectCategoryActivity extends BaseActivity implements AdapterSelec
         return new Intent(context, SelectCategoryActivity.class);
     }
 
-
+    // TODO: 02-04-2019 show functionality to show or hide mileage or non-mileage expenses
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,16 +73,11 @@ public class SelectCategoryActivity extends BaseActivity implements AdapterSelec
 
     @Override
     public void onCategorySelected(CategoryModel categoryModel) {
-        switch (categoryModel.getBaseCategory()){
-
-            case AppConstants.KEY_NORMAL_EXPENSE_CATEGORY_ID:
                 handleNormalExpense(categoryModel);
-                break;
-
-        }
     }
 
     private void handleNormalExpense(CategoryModel categoryModel) {
-        
+       Intent intent = ExpenseIntentManager.getCreateExpenseIntent(this, categoryModel);
+       startActivity(intent);
     }
 }

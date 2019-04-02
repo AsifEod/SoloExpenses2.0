@@ -15,4 +15,5 @@ public class AppConstants {
     public static final int KEY_NORMAL_EXPENSE_CATEGORY_ID = 6;
 
 
+    public static final String KEY_CATEGORY_MODEL = "KEY_CATEGORY_MODEL";
 }

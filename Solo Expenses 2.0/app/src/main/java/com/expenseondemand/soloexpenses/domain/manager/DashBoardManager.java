@@ -1,6 +1,7 @@
-package com.expenseondemand.soloexpenses.presentation.activity;
+package com.expenseondemand.soloexpenses.domain.manager;
 
 import com.expenseondemand.soloexpenses.R;
+import com.expenseondemand.soloexpenses.presentation.activity.DashBoardActivity;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
 
 import java.util.ArrayList;

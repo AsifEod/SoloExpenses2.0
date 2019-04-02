@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 
 import com.expenseondemand.soloexpenses.R;
+import com.expenseondemand.soloexpenses.domain.manager.DashBoardManager;
 import com.expenseondemand.soloexpenses.presentation.adapters.AdapterDashBoardMenu;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
