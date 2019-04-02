@@ -29,4 +29,6 @@
     <!--Row_dashboard_menu_item-->
     <dimen name="dashboard_row_icon_size">@dimen/_30sdp</dimen>
 
+    <!--Select cateogry screen-->
+    <dimen name="select_category_border_height">0.5dp</dimen>
 </resources>

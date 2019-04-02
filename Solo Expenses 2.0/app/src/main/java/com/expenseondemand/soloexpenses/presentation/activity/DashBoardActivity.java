@@ -6,8 +6,7 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 
 import com.expenseondemand.soloexpenses.R;
-import com.expenseondemand.soloexpenses.base.AppConstants;
-import com.expenseondemand.soloexpenses.presentation.adapters.DashBoardMenuAdapter;
+import com.expenseondemand.soloexpenses.presentation.adapters.AdapterDashBoardMenu;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
 import com.expenseondemand.soloexpenses.presentation.viewModel.DashBoardViewModel;
@@ -20,7 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DashBoardActivity extends BaseActivity implements DashBoardMenuAdapter.DashboardMenuAdapterListener {
+public class DashBoardActivity extends BaseActivity implements AdapterDashBoardMenu.DashboardMenuAdapterListener {
 
     @BindView(R.id.rv_claim)
     RecyclerView rv_claim;
@@ -119,7 +118,7 @@ public class DashBoardActivity extends BaseActivity implements DashBoardMenuAdap
             parentLayout.setVisibility(View.GONE);
         } else {
             parentLayout.setVisibility(View.VISIBLE);
-            recyclerView.setAdapter(new DashBoardMenuAdapter(menuModelList, recyclerView.getWidth(), this));
+            recyclerView.setAdapter(new AdapterDashBoardMenu(menuModelList, recyclerView.getWidth(), this));
         }
     }
 

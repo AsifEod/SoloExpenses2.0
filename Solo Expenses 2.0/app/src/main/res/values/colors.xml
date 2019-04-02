@@ -11,8 +11,11 @@
     <!--App colors-->
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="darker_gray">#ACACAC</color>
 
     <!--DashBoard color-->
     <color name="dashboard_bg_color">#eeedee</color>
     <color name="selector_text_color">#6d6d6d</color>
+
+
 </resources>

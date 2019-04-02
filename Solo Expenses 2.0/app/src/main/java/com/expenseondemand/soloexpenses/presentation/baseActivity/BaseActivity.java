@@ -51,6 +51,10 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         if (iv_back != null) {
             iv_back.setOnClickListener(this);
         }
+
+        if(iv_action != null){
+            iv_action.setOnClickListener(this);
+        }
     }
 
 
@@ -112,6 +116,14 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
             case R.id.iv_back:
                 onBackPress();
                 break;
+
+            case R.id.iv_action:
+                onIvActionClick();
+                break;
         }
+    }
+
+    protected void onIvActionClick() {
+        // No need to do anything in the base class
     }
 }

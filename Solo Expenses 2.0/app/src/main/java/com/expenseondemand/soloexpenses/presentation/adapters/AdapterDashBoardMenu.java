@@ -17,7 +17,7 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class AdapterDashBoardMenu extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     public interface DashboardMenuAdapterListener {
         void onDashboardItemClick(DashBoardActivity.Menu item);
@@ -27,7 +27,7 @@ public class DashBoardMenuAdapter extends RecyclerView.Adapter<RecyclerView.View
     private int recyclerViewWidth;
     private DashboardMenuAdapterListener listener;
 
-    public DashBoardMenuAdapter(List<DashBoardMenuModel> list, int recyclerViewWidth, DashboardMenuAdapterListener listener) {
+    public AdapterDashBoardMenu(List<DashBoardMenuModel> list, int recyclerViewWidth, DashboardMenuAdapterListener listener) {
         this.list = list;
         this.recyclerViewWidth = recyclerViewWidth;
         this.listener = listener;
