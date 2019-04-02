@@ -6,12 +6,14 @@ public class CategoryModel {
     private int resId;
     private String categoryName;
     private boolean isFav;
+    private int baseCategory;
 
-    public CategoryModel(int categoryId, int resId, String categoryName, boolean isFav) {
+    public CategoryModel(int categoryId, int resId, String categoryName, boolean isFav, int baseCategory) {
         this.categoryId = categoryId;
         this.resId = resId;
         this.categoryName = categoryName;
         this.isFav = isFav;
+        this.baseCategory = baseCategory;
     }
 
     public int getCategoryId() {
@@ -28,5 +30,9 @@ public class CategoryModel {
 
     public boolean isFav() {
         return isFav;
+    }
+
+    public int getBaseCategory() {
+        return baseCategory;
     }
 }

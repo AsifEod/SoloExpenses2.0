@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.expenseondemand.soloexpenses.R;
+import com.expenseondemand.soloexpenses.base.AppConstants;
 import com.expenseondemand.soloexpenses.domain.entities.CategoryModel;
 import com.expenseondemand.soloexpenses.presentation.adapters.AdapterSelectCategory;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
@@ -40,13 +41,13 @@ public class SelectCategoryActivity extends BaseActivity implements AdapterSelec
 
     private void updateCategoryListAdapter(List<CategoryModel> categoryModelList) {
 
-        rv_category_list.setAdapter(new AdapterSelectCategory(categoryModelList,this));
+        rv_category_list.setAdapter(new AdapterSelectCategory(categoryModelList, this));
 
     }
 
     private void initializeUI() {
         setupTopBar();
-        rv_category_list.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL, false));
+        rv_category_list.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         rv_category_list.setHasFixedSize(true);
 
     }
@@ -61,9 +62,9 @@ public class SelectCategoryActivity extends BaseActivity implements AdapterSelec
     private List<CategoryModel> generateCateogries() {
         List<CategoryModel> list = new ArrayList<>();
 
-        list.add(new CategoryModel(1,R.drawable.charts_icon_vector,"Air Travel", false));
-        list.add(new CategoryModel(2,R.drawable.refresh_icon_vector,"Hotel", false));
-        list.add(new CategoryModel(3,R.drawable.advances_icon_vector,"Mileage Google", false));
+        list.add(new CategoryModel(1, R.drawable.charts_icon_vector, "Air Travel", false, AppConstants.KEY_NORMAL_EXPENSE_CATEGORY_ID));
+        list.add(new CategoryModel(2, R.drawable.refresh_icon_vector, "Hotel", false, AppConstants.KEY_NORMAL_EXPENSE_CATEGORY_ID));
+        list.add(new CategoryModel(3, R.drawable.advances_icon_vector, "Mileage Google", false, AppConstants.KEY_NORMAL_EXPENSE_CATEGORY_ID));
 
         return list;
     }
@@ -71,6 +72,16 @@ public class SelectCategoryActivity extends BaseActivity implements AdapterSelec
 
     @Override
     public void onCategorySelected(CategoryModel categoryModel) {
-        Toast.makeText(getApplicationContext(), categoryModel.getCategoryName(), Toast.LENGTH_SHORT).show();
+        switch (categoryModel.getBaseCategory()){
+
+            case AppConstants.KEY_NORMAL_EXPENSE_CATEGORY_ID:
+                handleNormalExpense(categoryModel);
+                break;
+
+        }
+    }
+
+    private void handleNormalExpense(CategoryModel categoryModel) {
+        
     }
 }
