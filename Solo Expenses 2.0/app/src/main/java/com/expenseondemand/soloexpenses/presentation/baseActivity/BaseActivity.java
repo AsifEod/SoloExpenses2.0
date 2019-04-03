@@ -8,11 +8,17 @@ import android.widget.TextView;
 
 import com.expenseondemand.soloexpenses.R;
 import com.expenseondemand.soloexpenses.base.AppConstants;
+import com.expenseondemand.soloexpenses.presentation.model.AlertDialogModel;
+import com.expenseondemand.soloexpenses.presentation.utility.dialog.SoloAlertDialog;
 import com.expenseondemand.soloexpenses.presentation.viewModel.DashBoardViewModel;
 import com.expenseondemand.soloexpenses.presentation.viewModel.base.ViewModelFactory;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -125,5 +131,21 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
     protected void onIvActionClick() {
         // No need to do anything in the base class
+    }
+
+
+    protected DialogFragment showAlertDialog(String tag, AlertDialogModel data){
+        SoloAlertDialog dialogFragment = SoloAlertDialog.newInstance(data);
+
+        // remove if there is another instance of alertdialog
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        Fragment prev = fm.findFragmentByTag(tag);
+        if (prev != null) {
+            ft.remove(prev);
+        }
+
+        dialogFragment.show(fm, tag);
+        return dialogFragment;
     }
 }

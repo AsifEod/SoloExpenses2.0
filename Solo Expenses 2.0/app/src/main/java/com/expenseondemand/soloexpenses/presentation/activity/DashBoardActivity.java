@@ -9,6 +9,7 @@ import com.expenseondemand.soloexpenses.R;
 import com.expenseondemand.soloexpenses.domain.manager.DashBoardManager;
 import com.expenseondemand.soloexpenses.presentation.adapters.AdapterDashBoardMenu;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
+import com.expenseondemand.soloexpenses.presentation.model.AlertDialogModel;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
 import com.expenseondemand.soloexpenses.presentation.viewModel.DashBoardViewModel;
 
@@ -62,6 +63,13 @@ public class DashBoardActivity extends BaseActivity implements AdapterDashBoardM
         setContentView(R.layout.activity_dashboard);
         ButterKnife.bind(this);
         initializeUI();
+
+        AlertDialogModel dialog = new AlertDialogModel();
+        dialog.setTitle("This is sparta");
+        dialog.setSubTitle("This is a spartan kick. You want it?");
+        dialog.setBtnLeftTitle("Cancel");
+        dialog.setBtnRightTitle("KICK");
+        showAlertDialog("hit", dialog);
     }
 
     @Override
