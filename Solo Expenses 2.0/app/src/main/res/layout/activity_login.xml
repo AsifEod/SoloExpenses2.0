@@ -29,11 +29,11 @@
 
                 <TextView
                     android:id="@+id/txt_signIn"
+                    style="@style/TextViewNormalDarkGrayStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="@dimen/_5sdp"
                     android:text="@string/label_sign_in"
-                    android:textColor="?attr/DarkGrayText"
                     android:textSize="@dimen/_20sdp"
                     tools:text="Sign In" />
 
@@ -165,6 +165,23 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_forgot_password"
+                    style="@style/TextViewSmallBlueLinkStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="@dimen/_32sdp"
+                    android:text="@string/label_login_text_view_forgot_password"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
         </LinearLayout>
 
         <RelativeLayout
@@ -198,8 +215,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/_38sdp"
             android:layout_marginStart="@dimen/_5sdp"
-            android:layout_marginEnd="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
             android:orientation="horizontal"
             android:weightSum="1">
 
