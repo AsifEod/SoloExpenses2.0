@@ -3,6 +3,8 @@ package com.expenseondemand.soloexpenses.presentation.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.expenseondemand.soloexpenses.presentation.utility.dialog.SoloAlertDialog;
+
 public class AlertDialogModel implements Parcelable {
 
     private String title;
@@ -10,6 +12,7 @@ public class AlertDialogModel implements Parcelable {
     private String btnLeftTitle;
     private String btnRightTitle;
     private String subTitle;
+    private SoloAlertDialog.SoloAlertDialogListener listener;
 
     public AlertDialogModel() {
 
@@ -87,5 +90,13 @@ public class AlertDialogModel implements Parcelable {
 
     public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
+    }
+
+    public SoloAlertDialog.SoloAlertDialogListener getListener() {
+        return listener;
+    }
+
+    public void setListener(SoloAlertDialog.SoloAlertDialogListener listener) {
+        this.listener = listener;
     }
 }

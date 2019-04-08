@@ -133,7 +133,6 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         // No need to do anything in the base class
     }
 
-
     protected DialogFragment showAlertDialog(String tag, AlertDialogModel data){
         SoloAlertDialog dialogFragment = SoloAlertDialog.newInstance(data);
 
@@ -147,5 +146,21 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
 
         dialogFragment.show(fm, tag);
         return dialogFragment;
+    }
+
+    protected void dismissAlertDialog(String tag){
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        Fragment dialog = fm.findFragmentByTag(tag);
+        if (dialog != null) {
+            ft.remove(dialog);
+        }
+    }
+
+    protected boolean isDialogShowing(String tag){
+        // need to test this method properly
+        FragmentManager fm = getSupportFragmentManager();
+        Fragment dialog = fm.findFragmentByTag(tag);
+        return dialog != null;
     }
 }

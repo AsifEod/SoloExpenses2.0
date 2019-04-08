@@ -17,5 +17,6 @@
     <color name="dashboard_bg_color">#eeedee</color>
     <color name="selector_text_color">#6d6d6d</color>
 
-
+    <!--Dialog-->
+    <color name="blueTextDialog">#0079FF</color>
 </resources>

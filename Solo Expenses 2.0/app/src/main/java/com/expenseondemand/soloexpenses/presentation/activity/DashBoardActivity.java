@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Toast;
 
 import com.expenseondemand.soloexpenses.R;
 import com.expenseondemand.soloexpenses.domain.manager.DashBoardManager;
@@ -11,11 +12,13 @@ import com.expenseondemand.soloexpenses.presentation.adapters.AdapterDashBoardMe
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 import com.expenseondemand.soloexpenses.presentation.model.AlertDialogModel;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
+import com.expenseondemand.soloexpenses.presentation.utility.dialog.SoloAlertDialog;
 import com.expenseondemand.soloexpenses.presentation.viewModel.DashBoardViewModel;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
@@ -64,12 +67,18 @@ public class DashBoardActivity extends BaseActivity implements AdapterDashBoardM
         ButterKnife.bind(this);
         initializeUI();
 
-        AlertDialogModel dialog = new AlertDialogModel();
-        dialog.setTitle("This is sparta");
-        dialog.setSubTitle("This is a spartan kick. You want it?");
-        dialog.setBtnLeftTitle("Cancel");
-        dialog.setBtnRightTitle("KICK");
-        showAlertDialog("hit", dialog);
+//        AlertDialogModel dialog = new AlertDialogModel();
+//        dialog.setTitle("This is sparta");
+//        dialog.setSubTitle("This is a spartan kick. You want it?");
+//        dialog.setBtnLeftTitle("Cancel");
+//        dialog.setBtnRightTitle("Delete");
+//        dialog.setListener(new SoloAlertDialog.SoloAlertDialogListener() {
+//            @Override
+//            public void onAction(SoloAlertDialog.ButtonType buttonType) {
+//                Toast.makeText(getApplicationContext(),"Button " + buttonType.toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//    showAlertDialog("hit", dialog);
     }
 
     @Override

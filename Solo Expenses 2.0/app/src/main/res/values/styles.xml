@@ -95,6 +95,7 @@
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--TextView large default white-->
     <style name="TextViewWhiteLargeStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/WhiteTextDefaultColor</item>
         <item name="android:textSize">@dimen/text_size_default_large</item>
@@ -122,6 +123,12 @@
     <style name="TextViewSmallOffBlackStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/OffBlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
+<!-- TextView Large blue for Dialog action  -->
+    <style name="TextViewLargeBlueStyleDialog" parent="TextStyleBaseSolo">
+        <item name="android:textColor">@color/blueTextDialog</item>
+        <item name="android:textSize">@dimen/text_size_default_large</item>
     </style>
 
 

@@ -17,12 +17,31 @@ import androidx.fragment.app.DialogFragment;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class SoloAlertDialog extends DialogFragment {
+public class SoloAlertDialog extends DialogFragment implements View.OnClickListener {
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.tv_single:
+                clickHandler(ButtonType.SINGLE);
+                break;
+            case R.id.tv_left:
+                clickHandler(ButtonType.LEFT);
+                break;
+            case R.id.tv_right:
+                clickHandler(ButtonType.RIGHT);
+                break;
+        }
+    }
+
+    public interface SoloAlertDialogListener {
+        void onAction(ButtonType buttonType);
+    }
 
     public enum ButtonType {SINGLE, LEFT, RIGHT}
 
     private static final String KEY_ALERT_DIALOG_DATA = "KEY_ALERT_DIALOG_DATA";
-
+    private SoloAlertDialogListener listener;
     @BindView(R.id.tv_title)
     TextView tv_title;
     @BindView(R.id.tv_sub_title)
@@ -80,6 +99,10 @@ public class SoloAlertDialog extends DialogFragment {
             String title = alertData.getTitle();
             String subTitle = alertData.getSubTitle();
 
+            tv_single.setOnClickListener(this);
+            tv_left.setOnClickListener(this);
+            tv_right.setOnClickListener(this);
+
             if (AppUtils.isStringEmpty(leftText) || AppUtils.isStringEmpty(rightText)) {
                 // This means it is a single button dialog
                 two_btn_layout.setVisibility(View.GONE);
@@ -106,6 +129,14 @@ public class SoloAlertDialog extends DialogFragment {
                 tv_sub_title.setVisibility(View.GONE);
             }
 
+            // set listener
+            listener = alertData.getListener();
+        }
+    }
+
+    private void clickHandler(ButtonType type) {
+        if (listener != null) {
+            listener.onAction(type);
         }
     }
 
