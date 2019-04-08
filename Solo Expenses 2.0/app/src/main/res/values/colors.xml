@@ -12,6 +12,7 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="darker_gray">#ACACAC</color>
+    <color name="login_line">#c2c2c4</color>
 
     <!--DashBoard color-->
     <color name="dashboard_bg_color">#eeedee</color>

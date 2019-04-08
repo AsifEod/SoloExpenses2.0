@@ -134,11 +134,18 @@
         <item name="android:textSize">@dimen/text_size_default_small</item>
     </style>
 
-    <!--textview small light gray-->
+    <!--textview small Dark gray-->
     <style name="TextViewSmallDarkGrayStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/DarkGrayText</item>
         <item name="android:textSize">@dimen/text_size_default_small</item>
     </style>
+
+    <!--textview Normal Dark gray-->
+    <style name="TextViewNormalDarkGrayStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/DarkGrayText</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
     <!--text view small blue link-->
     <style name="TextViewSmallBlueLinkStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/BlueLinkTextColor</item>
@@ -166,6 +173,9 @@
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
     </style>
+
+
+    <!--*********************************TEXT INPUT LAYOUT STYLES*******************************************-->
 
     <!--TextInputLayout Theme -->
     <style name="TextInputLayoutStyleDefault" parent="Widget.Design.TextInputLayout">

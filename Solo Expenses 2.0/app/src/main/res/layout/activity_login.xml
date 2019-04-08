@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:padding="@dimen/_5sdp"
     tools:context="com.expenseondemand.soloexpenses.presentation.activity.LoginActivity">
 
@@ -34,7 +35,7 @@
                     android:text="@string/label_sign_in"
                     android:textColor="?attr/DarkGrayText"
                     android:textSize="@dimen/_20sdp"
-                    tools:text="Sign In"/>
+                    tools:text="Sign In" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -43,20 +44,20 @@
 
                     <TextView
                         android:id="@+id/txt_noteRegister"
+                        style="@style/TextViewSmallDarkGrayStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_5sdp"
                         android:text="@string/label_not_registered_with_us"
-                        android:textSize="@dimen/_11sdp"
-                        style="@style/TextViewSmallDarkGrayStyle"/>
+                        android:textSize="@dimen/_11sdp" />
 
                     <TextView
                         android:id="@+id/textViewRegister"
+                        style="@style/TextViewSmallBlueLinkStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/_5sdp"
                         android:text="@string/label_sign_up"
-                        style="@style/TextViewSmallBlueLinkStyle"
                         android:textSize="@dimen/_11sdp" />
                 </LinearLayout>
 
@@ -78,78 +79,159 @@
         </LinearLayout>
 
 
-        <!--email and password layout-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_5sdp"
-        android:background="@drawable/grey_background_rounded_corner"
-        android:orientation="vertical"
-        android:padding="@dimen/_10sdp">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/grey_background_rounded_corner"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
 
-            <ImageView
-                android:layout_width="@dimen/_16sdp"
-                android:layout_height="@dimen/_16sdp"
-                app:srcCompat="@drawable/email_vector"
-                android:layout_marginEnd="@dimen/_10sdp"
-                />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/til_email"
+            <!--Email layout-->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/TextInputLayoutStyleDefault"
-                app:errorTextAppearance="@style/ErrorTextStyle"
-                app:errorEnabled="true">
+                android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_email"
+                <ImageView
+                    android:id="@+id/iv_email"
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:srcCompat="@drawable/email_vector" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email"
+                    style="@style/TextInputLayoutStyleDefault"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textEmailAddress"
-                    android:hint="Email"
-                    />
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/ErrorTextStyle">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress" />
 
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <!--Password layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_18sdp"
+                    android:layout_height="@dimen/_18sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    app:srcCompat="@drawable/password_icon_vector" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyleDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/ErrorTextStyle"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Password"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!--Singin button -->
+            <Button
+                android:id="@+id/btn_signin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/signin_btn_state"
+                android:enabled="false"
+                android:text="@string/label_sign_in"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
         </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_60sdp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_centerVertical="true"
+                android:background="?attr/LightGrayText"
+                tools:background="@color/login_line" />
+
+            <TextView
+                style="@style/TextViewNormalDarkGrayStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="OR"
+                tools:text="OR" />
+        </RelativeLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:orientation="horizontal"
+            android:weightSum="1">
 
-            <ImageView
-                android:layout_width="@dimen/_16sdp"
-                android:layout_height="@dimen/_16sdp"
-                app:srcCompat="@drawable/password_icon_vector"
-                android:layout_marginEnd="@dimen/_10sdp"
-                />
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@drawable/google_left_rounded">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@style/TextInputLayoutStyleDefault"
-                app:errorTextAppearance="@style/ErrorTextStyle"
-                app:passwordToggleEnabled="true"
-                app:errorEnabled="true">
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    app:srcCompat="@drawable/google_icon_vector" />
+            </RelativeLayout>
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:background="@drawable/google_right_background">
+
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPassword"
-                    android:hint="Password" />
+                    android:layout_centerInParent="true"
+                    android:text="@string/sign_in_with_google"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+            </RelativeLayout>
 
-            </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
-
-    </LinearLayout>
 
 
     </LinearLayout>
