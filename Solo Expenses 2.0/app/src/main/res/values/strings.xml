@@ -4,4 +4,9 @@
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--Login screen text-->
+    <string name="label_sign_in">Sign In</string>
+    <string name="label_not_registered_with_us">Not Registered with us?</string>
+    <string name="label_sign_up">Register</string>
 </resources>

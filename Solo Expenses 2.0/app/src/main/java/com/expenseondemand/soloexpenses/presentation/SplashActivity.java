@@ -12,6 +12,7 @@ import android.view.View;
 
 import com.expenseondemand.soloexpenses.R;
 import com.expenseondemand.soloexpenses.presentation.activity.DashBoardActivity;
+import com.expenseondemand.soloexpenses.presentation.activity.LoginActivity;
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 
 /**
@@ -113,7 +114,7 @@ public class SplashActivity extends BaseActivity {
         // while interacting with the UI.
         findViewById(R.id.dummy_button).setOnTouchListener(mDelayHideTouchListener);
 
-        Intent intent = new Intent(this, DashBoardActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 

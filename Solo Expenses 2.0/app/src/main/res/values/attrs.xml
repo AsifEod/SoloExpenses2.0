@@ -14,5 +14,8 @@
     <attr name="OffBlackTextDefault" format="reference|color"/>
     <attr name="ThemePrimaryColor" format="reference|color"/>
     <attr name="WhiteTextDefaultColor" format="reference|color"/>
-
+    <attr name="DarkGrayText" format="reference|color"/>
+    <attr name="LightGrayText" format="reference|color"/>
+    <attr name="BlueLinkTextColor" format="reference|color"/>
+    <attr name="ErrorTextColor" format="reference|color"/>
 </resources>

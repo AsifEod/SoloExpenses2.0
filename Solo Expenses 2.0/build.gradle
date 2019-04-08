@@ -6,6 +6,7 @@ buildscript {
     ext{
         gradleVersion = '3.3.2'
         supportLibrary = '1.0.2'
+        googleMaterial = '1.1.0-alpha05'
         recyclerViewVersion = '1.0.0'
         cardviewVersion = '1.0.0'
         archLifecycleVersion = '2.0.0'

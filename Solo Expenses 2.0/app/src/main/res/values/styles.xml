@@ -5,7 +5,8 @@
         <!-- Customize your theme here. -->
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
         <item name="android:textAppearance">@style/TextStyleBaseSolo</item>
-
+        <!--This is to change the color of underline in textInputLayout-->
+        <item name="colorControlActivated">?attr/LightGrayText</item>
     </style>
 
     <style name="SoloDefaultTheme" parent="AppTheme">
@@ -18,6 +19,10 @@
         <item name="BlackTextDefault">#090909</item> <!--custom created color attribute-->
         <item name="OffBlackTextDefault">#3a3b3a</item>
         <item name="WhiteTextDefaultColor">#ffffff</item>
+        <item name="DarkGrayText">#939393</item>
+        <item name="LightGrayText">#a4a4a5</item>
+        <item name="BlueLinkTextColor">#01AFF1</item>
+        <item name="ErrorTextColor">#e20a1f</item>
     </style>
 
     <!--Just for test-->
@@ -31,6 +36,10 @@
         <item name="BlackTextDefault">#4ef442</item> <!--custom created color attribute-->
         <item name="OffBlackTextDefault">#f441eb</item>
         <item name="WhiteTextDefaultColor">#4ef442</item>
+        <item name="DarkGrayText">#939393</item>
+        <item name="LightGrayText">#a4a4a5</item>
+        <item name="BlueLinkTextColor">#01AFF1</item>
+        <item name="ErrorTextColor">#e20a1f</item>
     </style>
 
     <!--Below is just a sample for how we can change extend base theme and change theme-->
@@ -125,7 +134,18 @@
         <item name="android:textSize">@dimen/text_size_default_small</item>
     </style>
 
-<!-- TextView Large blue for Dialog action  -->
+    <!--textview small light gray-->
+    <style name="TextViewSmallDarkGrayStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/DarkGrayText</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+    <!--text view small blue link-->
+    <style name="TextViewSmallBlueLinkStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/BlueLinkTextColor</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
+    <!-- TextView Large blue for Dialog action  -->
     <style name="TextViewLargeBlueStyleDialog" parent="TextStyleBaseSolo">
         <item name="android:textColor">@color/blueTextDialog</item>
         <item name="android:textSize">@dimen/text_size_default_large</item>
@@ -139,10 +159,28 @@
     </style>
 
 
+    <!--*********************************DIALOG VIEW STYLES*******************************************-->
     <!--Theme for DialogFragment-->
     <style name="SoloDialogTheme" parent="@android:style/Theme">
         <item name="android:windowBackground">@color/black_overlay</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <!--TextInputLayout Theme -->
+    <style name="TextInputLayoutStyleDefault" parent="Widget.Design.TextInputLayout">
+        <item name="hintAnimationEnabled">true</item>
+        <item name="hintTextAppearance">@style/HintDefaultStyle</item>
+
+    </style>
+
+    <style name="HintDefaultStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">?attr/LightGrayText</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+    <style name="ErrorTextStyle" parent="TextAppearance.Design.Error">
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+        <item name="android:textColor">?attr/ErrorTextColor</item>
     </style>
 </resources>

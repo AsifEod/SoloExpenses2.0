@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".presentation.activity.expenseScreen.CreateEditExpenseActivity"></activity>
-        <!-- Splash page -->
+        <activity android:name=".presentation.activity.LoginActivity"></activity>
+        <activity android:name=".presentation.activity.expenseScreen.CreateEditExpenseActivity" /> <!-- Splash page -->
         <activity
             android:name=".presentation.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

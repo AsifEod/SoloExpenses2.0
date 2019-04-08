@@ -29,6 +29,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$supportLibrary"
     implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
     implementation "androidx.cardview:cardview:$cardviewVersion"
+    implementation "com.google.android.material:material:$googleMaterial"
 
     // Architecture component
     implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
