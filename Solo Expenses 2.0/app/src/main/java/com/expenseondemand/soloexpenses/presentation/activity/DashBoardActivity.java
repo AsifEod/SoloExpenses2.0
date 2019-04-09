@@ -12,6 +12,7 @@ import com.expenseondemand.soloexpenses.presentation.adapters.AdapterDashBoardMe
 import com.expenseondemand.soloexpenses.presentation.baseActivity.BaseActivity;
 import com.expenseondemand.soloexpenses.presentation.model.AlertDialogModel;
 import com.expenseondemand.soloexpenses.presentation.model.DashBoardMenuModel;
+import com.expenseondemand.soloexpenses.presentation.utility.dialog.AddReceiptDialog;
 import com.expenseondemand.soloexpenses.presentation.utility.dialog.SoloAlertDialog;
 import com.expenseondemand.soloexpenses.presentation.viewModel.DashBoardViewModel;
 
@@ -19,6 +20,7 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
@@ -68,8 +70,8 @@ public class DashBoardActivity extends BaseActivity implements AdapterDashBoardM
         initializeUI();
 
 //        AlertDialogModel dialog = new AlertDialogModel();
-//        dialog.setTitle("This is sparta");
-//        dialog.setSubTitle("This is a spartan kick. You want it?");
+//        dialog.setTitle("This is Title");
+//        dialog.setSubTitle("This is subtitle. Are you sure?");
 //        dialog.setBtnLeftTitle("Cancel");
 //        dialog.setBtnRightTitle("Delete");
 //        dialog.setListener(new SoloAlertDialog.SoloAlertDialogListener() {
@@ -79,6 +81,15 @@ public class DashBoardActivity extends BaseActivity implements AdapterDashBoardM
 //            }
 //        });
 //    showAlertDialog("hit", dialog);
+
+        AddReceiptDialog fragment =AddReceiptDialog.newInstance();
+        fragment.setListener(new AddReceiptDialog.AddReceiptListener() {
+            @Override
+            public void onAddReceiptClick(AddReceiptDialog.ButtonType buttonType) {
+                Toast.makeText(getApplicationContext(), "sada" + buttonType.toString(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        ((AddReceiptDialog) fragment).show(getSupportFragmentManager(),"yo");
     }
 
     @Override
