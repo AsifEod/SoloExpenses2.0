@@ -4,6 +4,7 @@
 
     <!-- Common -->
     <dimen name="actionable_count_icon_size">@dimen/_12sdp</dimen>
+    <dimen name="margin_between_text_and_hint">@dimen/_8sdp</dimen>
 
     <!--Text Size-->
     <dimen name="text_size_default_8sp">8sp</dimen>
@@ -31,4 +32,6 @@
 
     <!--Select cateogry screen-->
     <dimen name="select_category_border_height">0.5dp</dimen>
+
+
 </resources>

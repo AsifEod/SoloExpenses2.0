@@ -113,6 +113,7 @@
                         android:id="@+id/et_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_between_text_and_hint"
                         android:hint="Email"
                         android:inputType="textEmailAddress" />
 
@@ -144,6 +145,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_between_text_and_hint"
                         android:hint="Password"
                         android:inputType="textPassword" />
 

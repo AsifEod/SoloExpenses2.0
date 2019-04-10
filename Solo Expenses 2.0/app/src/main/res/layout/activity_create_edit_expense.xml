@@ -135,6 +135,7 @@
                             android:layout_height="wrap_content"
                             android:background="@null"
                             android:drawableEnd="@drawable/calendar_icon_vector"
+                            android:paddingTop="@dimen/margin_between_text_and_hint"
                             android:layout_marginBottom="@dimen/_minus12sdp"
                             android:hint="@string/label_date"
                             android:text="16-Jun-2019" />
@@ -169,6 +170,7 @@
                                 android:layout_height="wrap_content"
                                 android:background="@null"
                                 android:hint="@string/label_amount"
+                                android:paddingTop="@dimen/margin_between_text_and_hint"
                                 android:inputType="numberDecimal"
                                 android:layout_marginBottom="@dimen/_minus12sdp"
                                 android:text="4350.99" />
@@ -192,6 +194,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@null"
+                                android:paddingTop="@dimen/margin_between_text_and_hint"
                                 android:drawableEnd="@drawable/right_arrow_icon_vector"
                                 android:layout_marginBottom="@dimen/_minus12sdp"
                                 android:hint="@string/currency"
