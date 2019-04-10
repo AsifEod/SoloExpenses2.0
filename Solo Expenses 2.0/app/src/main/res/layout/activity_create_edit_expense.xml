@@ -116,9 +116,10 @@
                 android:weightSum="1">
 
                 <RelativeLayout
+                    android:id="@+id/left_layout"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.7">
+                    android:layout_weight="0.65">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/til_date"
@@ -133,11 +134,11 @@
                             android:id="@+id/et_date"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_minus12sdp"
                             android:background="@null"
                             android:drawableEnd="@drawable/calendar_icon_vector"
-                            android:paddingTop="@dimen/margin_between_text_and_hint"
-                            android:layout_marginBottom="@dimen/_minus12sdp"
                             android:hint="@string/label_date"
+                            android:paddingTop="@dimen/margin_between_text_and_hint"
                             android:text="16-Jun-2019" />
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -159,8 +160,8 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.6"
-                            android:paddingTop="@dimen/_10sdp"
                             android:background="@drawable/bottom_right_grey_border"
+                            android:paddingTop="@dimen/_10sdp"
                             app:errorEnabled="true"
                             app:errorTextAppearance="@style/ErrorTextStyle">
 
@@ -168,11 +169,11 @@
                                 android:id="@+id/et_amount"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_minus12sdp"
                                 android:background="@null"
                                 android:hint="@string/label_amount"
-                                android:paddingTop="@dimen/margin_between_text_and_hint"
                                 android:inputType="numberDecimal"
-                                android:layout_marginBottom="@dimen/_minus12sdp"
+                                android:paddingTop="@dimen/margin_between_text_and_hint"
                                 android:text="4350.99" />
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -183,9 +184,9 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="0.4"
-                            android:paddingTop="@dimen/_10sdp"
-                            android:paddingStart="@dimen/_8sdp"
                             android:background="@drawable/bottom_grey_border"
+                            android:paddingStart="@dimen/_8sdp"
+                            android:paddingTop="@dimen/_10sdp"
                             app:errorEnabled="true"
                             app:errorTextAppearance="@style/ErrorTextStyle">
 
@@ -193,16 +194,39 @@
                                 android:id="@+id/et_currency"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@null"
-                                android:paddingTop="@dimen/margin_between_text_and_hint"
-                                android:drawableEnd="@drawable/right_arrow_icon_vector"
                                 android:layout_marginBottom="@dimen/_minus12sdp"
+                                android:background="@null"
+                                android:drawableEnd="@drawable/right_arrow_icon_vector"
                                 android:hint="@string/currency"
-                                android:text="INR"/>
+                                android:paddingTop="@dimen/margin_between_text_and_hint"
+                                android:text="INR" />
 
                         </com.google.android.material.textfield.TextInputLayout>
+
                     </LinearLayout>
 
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.35">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/create_expense_camera_background">
+
+                        <ImageView
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/add_receipt_camera_icon_vector"
+                            style="@style/ThemeIconColor"/>
+                    </RelativeLayout>
                 </RelativeLayout>
 
             </LinearLayout>

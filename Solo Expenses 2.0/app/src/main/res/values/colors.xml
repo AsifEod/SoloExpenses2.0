@@ -20,4 +20,7 @@
 
     <!--Dialog-->
     <color name="blueTextDialog">#0079FF</color>
+    <!--Create Expense screen-->
+    <color name="grey_create_expense_receipt_background">#F7F8F9</color>
+    <color name="grey_create_expense_category_layout">#FBFCFC</color>
 </resources>
