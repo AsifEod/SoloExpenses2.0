@@ -82,14 +82,14 @@ public class DashBoardActivity extends BaseActivity implements AdapterDashBoardM
 //        });
 //    showAlertDialog("hit", dialog);
 
-        AddReceiptDialog fragment =AddReceiptDialog.newInstance();
-        fragment.setListener(new AddReceiptDialog.AddReceiptListener() {
-            @Override
-            public void onAddReceiptClick(AddReceiptDialog.ButtonType buttonType) {
-                Toast.makeText(getApplicationContext(), "sada" + buttonType.toString(), Toast.LENGTH_SHORT).show();
-            }
-        });
-        ((AddReceiptDialog) fragment).show(getSupportFragmentManager(),"yo");
+//        AddReceiptDialog fragment =AddReceiptDialog.newInstance();
+//        fragment.setListener(new AddReceiptDialog.AddReceiptListener() {
+//            @Override
+//            public void onAddReceiptClick(AddReceiptDialog.ButtonType buttonType) {
+//                Toast.makeText(getApplicationContext(), "sada" + buttonType.toString(), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//        ((AddReceiptDialog) fragment).show(getSupportFragmentManager(),"yo");
     }
 
     @Override

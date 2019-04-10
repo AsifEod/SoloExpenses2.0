@@ -15,4 +15,7 @@
     <string name="label_expense">Expense</string>
     <string name="label_category">Category</string>
     <string name="label_policy">Policy</string>
+    <string name="label_date">Date</string>
+    <string name="label_amount">Amount</string>
+    <string name="currency">Currency</string>
 </resources>
