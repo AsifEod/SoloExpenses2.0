@@ -35,6 +35,7 @@
 
                 <TextView
                     android:id="@+id/tv_category_label"
+                    style="@style/HintDefaultStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/label_category" />
@@ -56,6 +57,7 @@
 
                     <TextView
                         android:id="@+id/tv_category_name"
+                        style="@style/TextViewNormalThemeColorStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerVertical="true"
@@ -88,9 +90,9 @@
                     <ImageView
                         android:id="@+id/iv_policy_violation"
                         style="@style/ThemeIconColor"
-                        android:layout_width="@dimen/_30sdp"
-                        android:layout_height="@dimen/_30sdp"
-                        app:srcCompat="@drawable/expenses_icon_vector" />
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        app:srcCompat="@drawable/expense_policy_icon_vector" />
 
                     <TextView
                         android:id="@+id/tv_policy_violation"
@@ -100,7 +102,7 @@
                         android:layout_below="@+id/iv_policy_violation"
                         android:layout_centerHorizontal="true"
                         android:text="@string/label_policy"
-                        android:textSize="@dimen/text_size_default_xsmall" />
+                        android:textSize="@dimen/text_size_default_small" />
                 </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>
@@ -132,6 +134,7 @@
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/et_date"
+                            style="@style/TextViewNormalThemeColorStyle"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="@dimen/_minus12sdp"
@@ -139,7 +142,9 @@
                             android:drawableEnd="@drawable/calendar_icon_vector"
                             android:hint="@string/label_date"
                             android:paddingTop="@dimen/margin_between_text_and_hint"
-                            android:text="16-Jun-2019" />
+                            android:text="16-Jun-2019"
+                            android:textColorHint="?attr/LightGrayText"
+                            android:textSize="@dimen/text_size_default_large" />
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <LinearLayout
@@ -167,6 +172,7 @@
 
                             <com.google.android.material.textfield.TextInputEditText
                                 android:id="@+id/et_amount"
+                                style="@style/TextViewNormalThemeColorStyle"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="@dimen/_minus12sdp"
@@ -174,35 +180,56 @@
                                 android:hint="@string/label_amount"
                                 android:inputType="numberDecimal"
                                 android:paddingTop="@dimen/margin_between_text_and_hint"
-                                android:text="4350.99" />
+                                android:text="4350.99"
+                                android:textColorHint="?attr/LightGrayText"
+                                android:textSize="@dimen/text_size_default_large" />
                         </com.google.android.material.textfield.TextInputLayout>
 
                         <!--Currency-->
-                        <com.google.android.material.textfield.TextInputLayout
-                            android:id="@+id/til_currency"
-                            style="@style/TextInputLayoutStyleDefault"
+                        <RelativeLayout
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_weight="0.4"
-                            android:background="@drawable/bottom_grey_border"
-                            android:paddingStart="@dimen/_8sdp"
-                            android:paddingTop="@dimen/_10sdp"
-                            app:errorEnabled="true"
-                            app:errorTextAppearance="@style/ErrorTextStyle">
+                            android:background="@drawable/bottom_grey_border">
 
-                            <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/et_currency"
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_currency"
+                                style="@style/TextInputLayoutStyleDefault"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="@dimen/_minus12sdp"
-                                android:background="@null"
-                                android:drawableEnd="@drawable/right_arrow_icon_vector"
-                                android:hint="@string/currency"
-                                android:paddingTop="@dimen/margin_between_text_and_hint"
-                                android:text="INR" />
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/right_arrow_currency"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                app:errorEnabled="true"
+                                app:errorTextAppearance="@style/ErrorTextStyle">
 
-                        </com.google.android.material.textfield.TextInputLayout>
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_currency"
+                                    style="@style/TextViewNormalThemeColorStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_minus12sdp"
+                                    android:background="@null"
+                                    android:hint="@string/currency"
+                                    android:paddingTop="@dimen/margin_between_text_and_hint"
+                                    android:text="INR"
+                                    android:textColorHint="?attr/LightGrayText"
+                                    android:textSize="@dimen/text_size_default_large" />
+                            </com.google.android.material.textfield.TextInputLayout>
 
+                            <ImageView
+                                android:id="@+id/right_arrow_currency"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:paddingEnd="@dimen/_minus4sdp"
+                                android:textSize="@dimen/text_size_default_large"
+                                app:srcCompat="@drawable/right_arrow_icon_vector"
+
+                                />
+                        </RelativeLayout>
                     </LinearLayout>
 
                 </RelativeLayout>
@@ -221,11 +248,11 @@
                         android:background="@drawable/create_expense_camera_background">
 
                         <ImageView
+                            style="@style/ThemeIconColor"
                             android:layout_width="@dimen/_36sdp"
                             android:layout_height="@dimen/_36sdp"
                             android:layout_centerInParent="true"
-                            app:srcCompat="@drawable/add_receipt_camera_icon_vector"
-                            style="@style/ThemeIconColor"/>
+                            app:srcCompat="@drawable/add_receipt_camera_icon_vector" />
                     </RelativeLayout>
                 </RelativeLayout>
 
