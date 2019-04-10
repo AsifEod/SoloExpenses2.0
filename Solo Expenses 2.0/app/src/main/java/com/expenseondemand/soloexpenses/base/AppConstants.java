@@ -3,7 +3,7 @@ package com.expenseondemand.soloexpenses.base;
 public class AppConstants {
 
     public enum Theme {Default, RED} // This lists all the supported themes
-    public enum ScreenName{DASHBOARD, SELECT_CATEGORY, CREATE_EXPENSE}
+    public enum ScreenName{DASHBOARD, SELECT_CATEGORY, CREATE_NORMAL_EXPENSE}
 
     public static Theme APP_THEME = Theme.Default; // current theme of the application
 

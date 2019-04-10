@@ -12,4 +12,7 @@
     <string name="sign_in_with_google">Sign In with Google</string>
     <string name="label_login_text_view_forgot_password">Forgot password?</string>
     <string name="add_receipt">Add Receipt</string>
+    <string name="label_expense">Expense</string>
+    <string name="label_category">Category</string>
+    <string name="label_policy">Policy</string>
 </resources>

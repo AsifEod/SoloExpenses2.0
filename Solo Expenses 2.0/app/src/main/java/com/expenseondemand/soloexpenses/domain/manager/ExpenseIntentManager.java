@@ -24,8 +24,7 @@ public class ExpenseIntentManager {
     }
 
     private static Intent getIntentForNormalExpense(Activity activity, CategoryModel categoryModel) {
-        Intent intent = new Intent(activity, CreateEditExpenseActivity.class);
-        intent.putExtra(AppConstants.KEY_CATEGORY_MODEL, categoryModel);
+        Intent intent = CreateEditExpenseActivity.getCreateEditExpenseIntent(activity, categoryModel);
         return intent;
     }
 

@@ -36,6 +36,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         setAppTheme();
     }
 
+    //inflates topbar layout
     protected View inflateView(int res) {
         View view = LayoutInflater.from(this).inflate(res, null);
         initializeTopbarUI(view);
