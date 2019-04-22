@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="app_padding_left">20dp</dimen>
-    <dimen name="org_logo_width">80dp</dimen>
+
 
     <!-- Common -->
-    <dimen name="margin_normal_five_dp">5dp</dimen>
-    <dimen name="margin_normal_ten_dp">10dp</dimen>
-    <dimen name="margin_normal_nine_dp">9dp</dimen>
-    <dimen name="margin_normal_twelve_dp">12dp</dimen>
-    <dimen name="text_standerd_very_small">8sp</dimen>
-    <dimen name="text_standerd_small">12sp</dimen>
-    <dimen name="text_standerd_medium">14sp</dimen>
-    <dimen name="text_standerd_larg">16sp</dimen>
-    <dimen name="margin_normal_fifteen_dp">15dp</dimen>
-    <dimen name="margin_normal_twenty_dp">20dp</dimen>
-    <dimen name="margin_normal_twenty_five">25dp</dimen>
-    <dimen name="margin_normal_thierty">30dp</dimen>
-    <dimen name="margin_normal_one_dp">1dp</dimen>
-    <dimen name="margin_normal_two_dp">2dp</dimen>
-    <dimen name="margin_normal_three_dp">3dp</dimen>
-
+    <dimen name="actionable_count_icon_size">@dimen/_12sdp</dimen>
+    <dimen name="margin_between_text_and_hint">@dimen/_8sdp</dimen>
 
     <!--Text Size-->
+    <dimen name="text_size_default_8sp">8sp</dimen>
     <dimen name="text_size_default_xsmall">10sp</dimen>
     <dimen name="text_size_default_small">12sp</dimen>
     <dimen name="text_size_default_normal">14sp</dimen>
     <dimen name="text_size_default_large">16sp</dimen>
     <dimen name="text_size_default_extra_large">18sp</dimen>
-    <dimen name="app_view_elevation">2dp</dimen>
+    <dimen name="app_view_elevation">@dimen/_2sdp</dimen>
+
 
     <!--Dashboard-->
-    <dimen name="note_icon_width_profile">15dp</dimen>
-    <dimen name="name_prefix_width">40dp</dimen>
+
+    <dimen name="dashboard_header_padding_left_right">@dimen/_10sdp</dimen>
+    <dimen name="dashboard_header_padding_top_bottom">@dimen/_10sdp</dimen>
+    <dimen name="dashboard_org_logo_width">@dimen/_70sdp</dimen>
+    <dimen name="dashboard_name_prefix_size">@dimen/_30sdp</dimen>
+    <dimen name="dashboard_note_icon_size">@dimen/_10sdp</dimen>
+    <dimen name="dashboard_note_icon_left_margin">@dimen/_minus8sdp</dimen>
+    <dimen name="dashboard_menu_title_margin">@dimen/_4sdp</dimen>
+    <dimen name="dashboard_rv_margin">@dimen/_4sdp</dimen>
+
+    <!--Row_dashboard_menu_item-->
+    <dimen name="dashboard_row_icon_size">@dimen/_30sdp</dimen>
+
+    <!--Select cateogry screen-->
+    <dimen name="select_category_border_height">0.5dp</dimen>
 
 
 </resources>

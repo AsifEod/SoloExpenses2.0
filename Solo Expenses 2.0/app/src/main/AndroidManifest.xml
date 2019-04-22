@@ -12,8 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-        <!--Splash page-->
+        <activity android:name=".presentation.activity.LoginActivity"></activity>
+        <activity android:name=".presentation.activity.expenseScreen.CreateEditExpenseActivity" /> <!-- Splash page -->
         <activity
             android:name=".presentation.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -24,13 +24,13 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-
-        <!--DashBoard screen-->
-        <activity android:name=".presentation.DashBoardActivity" />
-
-
+        </activity> <!-- DashBoard screen -->
+        <activity
+            android:name=".presentation.activity.DashBoardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".presentation.activity.SelectCategoryActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

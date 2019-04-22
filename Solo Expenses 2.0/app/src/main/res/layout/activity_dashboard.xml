@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.DashBoardActivity">
+    tools:context=".presentation.activity.DashBoardActivity">
 
     <!--Header layout-->
     <RelativeLayout
@@ -15,14 +15,14 @@
         android:background="@color/white"
         android:clipToPadding="false"
         android:elevation="@dimen/app_view_elevation"
-        android:paddingStart="@dimen/app_padding_left"
-        android:paddingTop="@dimen/margin_normal_twelve_dp"
-        android:paddingEnd="@dimen/margin_normal_ten_dp"
-        android:paddingBottom="@dimen/margin_normal_twelve_dp">
+        android:paddingStart="@dimen/dashboard_header_padding_left_right"
+        android:paddingTop="@dimen/dashboard_header_padding_top_bottom"
+        android:paddingEnd="@dimen/dashboard_header_padding_left_right"
+        android:paddingBottom="@dimen/dashboard_header_padding_top_bottom">
 
         <ImageView
             android:id="@+id/iv_organization_logo"
-            android:layout_width="@dimen/org_logo_width"
+            android:layout_width="@dimen/dashboard_org_logo_width"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
@@ -36,22 +36,22 @@
 
             <TextView
                 android:id="@+id/tv_username_prefix"
-                android:layout_width="@dimen/name_prefix_width"
-                android:layout_height="@dimen/name_prefix_width"
-                android:background="@drawable/profile_name_circle"
+                style="@style/TextViewNormalThemeColorStyle"
+                android:layout_width="@dimen/dashboard_name_prefix_size"
+                android:layout_height="@dimen/dashboard_name_prefix_size"
                 android:layout_toStartOf="@+id/iv_note_profile"
+                android:background="@drawable/profile_name_circle"
                 android:gravity="center"
                 android:text="HB"
-                style="@style/TextViewNormalThemeColorStyle"
                 android:textSize="@dimen/text_size_default_normal" />
 
             <ImageView
                 android:id="@+id/iv_note_profile"
-                android:layout_width="@dimen/note_icon_width_profile"
-                android:layout_height="@dimen/note_icon_width_profile"
+                android:layout_width="@dimen/dashboard_note_icon_size"
+                android:layout_height="@dimen/dashboard_note_icon_size"
                 android:layout_alignTop="@+id/tv_username_prefix"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="-8dp"
+                android:layout_marginStart="@dimen/dashboard_note_icon_left_margin"
                 app:srcCompat="@drawable/note_icon_vector" />
         </RelativeLayout>
 
@@ -69,13 +69,15 @@
         <!--scroll view single child-->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dashboard_header_padding_left_right">
 
             <!--Claim layout-->
             <androidx.cardview.widget.CardView
+                android:id="@+id/claim_layout"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_margin="@dimen/margin_normal_nine_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
                 android:background="@color/white"
                 app:cardCornerRadius="0dp">
 
@@ -85,20 +87,135 @@
 
                     <TextView
                         android:id="@+id/tv_claim"
+                        style="@style/TextViewNormalStyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/margin_normal_nine_dp"
-                        android:layout_marginTop="@dimen/margin_normal_two_dp"
-                        android:layout_marginEnd="@dimen/margin_normal_nine_dp"
-                        android:layout_marginBottom="@dimen/margin_normal_two_dp"
-                        style="@style/TextViewNormalStyle"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
                         android:text="CLAIM / PAY" />
 
                     <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recycler_view_claim"
-                        android:layout_below="@+id/tv_claim"
+                        android:id="@+id/rv_claim"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_claim"
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--List and action layout-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/list_action_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/claim_layout"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
+                android:background="@color/white"
+                app:cardCornerRadius="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_list_action"
+                        style="@style/TextViewNormalStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
+                        android:text="LIST &amp; ACTION" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_list_action"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_list_action"
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!--Approve layout-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/approve_layout"
+                android:layout_below="@+id/list_action_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
+                android:background="@color/white"
+                app:cardCornerRadius="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_approve"
+                        style="@style/TextViewNormalStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
+                        android:text="APRROVE" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_approve"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_approve"
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+            <!--Reimburse layout-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/reimburse_layout"
+                android:layout_below="@id/approve_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dashboard_header_padding_left_right"
+                android:background="@color/white"
+                app:cardCornerRadius="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_reimburse"
+                        style="@style/TextViewNormalStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginTop="@dimen/dashboard_menu_title_margin"
+                        android:layout_marginBottom="@dimen/dashboard_menu_title_margin"
+                        android:text="REIMBURSE" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_reimburse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_reimburse"
+                        android:layout_marginStart="@dimen/dashboard_rv_margin"
+                        android:layout_marginBottom="@dimen/dashboard_rv_margin" />
 
                 </RelativeLayout>
 

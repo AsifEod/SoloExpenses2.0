@@ -5,7 +5,8 @@
         <!-- Customize your theme here. -->
         <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless</item>
         <item name="android:textAppearance">@style/TextStyleBaseSolo</item>
-
+        <!--This is to change the color of underline in textInputLayout-->
+        <item name="colorControlActivated">?attr/LightGrayText</item>
     </style>
 
     <style name="SoloDefaultTheme" parent="AppTheme">
@@ -17,16 +18,37 @@
         <item name="ThemePrimaryColor">@color/colorPrimaryDefaultTheme</item>
         <item name="BlackTextDefault">#090909</item> <!--custom created color attribute-->
         <item name="OffBlackTextDefault">#3a3b3a</item>
+        <item name="WhiteTextDefaultColor">#ffffff</item>
+        <item name="DarkGrayText">#939393</item>
+        <item name="LightGrayText">#a4a4a5</item>
+        <item name="BlueLinkTextColor">#01AFF1</item>
+        <item name="ErrorTextColor">#e20a1f</item>
     </style>
 
+    <!--Just for test-->
+    <style name="SoloRedTheme" parent="AppTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ff1744</item>
+        <item name="colorPrimaryDark">#d50000</item>
+        <item name="colorAccent">#ff5252</item>
+        <item name="android:checkboxStyle">@style/AppCheckBox</item>
+        <item name="ThemePrimaryColor">#ff1744</item>
+        <item name="BlackTextDefault">#4ef442</item> <!--custom created color attribute-->
+        <item name="OffBlackTextDefault">#f441eb</item>
+        <item name="WhiteTextDefaultColor">#4ef442</item>
+        <item name="DarkGrayText">#939393</item>
+        <item name="LightGrayText">#a4a4a5</item>
+        <item name="BlueLinkTextColor">#01AFF1</item>
+        <item name="ErrorTextColor">#e20a1f</item>
+    </style>
 
     <!--Below is just a sample for how we can change extend base theme and change theme-->
     <!--<style name="SoloAnyOtherThemeFormat" parent="AppTheme">-->
-        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
-        <!--<item name="colorPrimary">#9E9E9E</item>-->
-        <!--<item name="colorPrimaryDark">#757575</item>-->
-        <!--<item name="colorAccent">@color/colorAccent</item>-->
-        <!--<item name="DefaultTextColor">#999999</item>-->
+    <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+    <!--<item name="colorPrimary">#9E9E9E</item>-->
+    <!--<item name="colorPrimaryDark">#757575</item>-->
+    <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--<item name="DefaultTextColor">#999999</item>-->
     <!--</style>-->
 
     <style name="FullscreenTheme" parent="AppTheme">
@@ -47,6 +69,15 @@
     </style>
 
 
+    <!--*********************************IMAGE VIEW STYLES*******************************************-->
+    <style name="ThemeIconColor">
+        <item name="android:tint">?attr/ThemePrimaryColor</item>
+    </style>
+
+    <style name="ToolbarElementColor">
+        <item name="android:tint">?attr/WhiteTextDefaultColor</item>
+    </style>
+
     <!--*********************************TEXT VIEW STYLES*******************************************-->
 
     <!--Base TextView style-->
@@ -55,32 +86,111 @@
     </style>
 
 
-    <!--text view large theme-->
+    <!--text view large Black default-->
     <style name="TextViewLargeStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/BlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_large</item>
     </style>
 
+    <!--text view large  off Black default-->
     <style name="TextViewLargeOffBlackStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/OffBlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_large</item>
     </style>
 
-    <!--text view Normal theme-->
+    <!--text view Normal Default black-->
     <style name="TextViewNormalStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/BlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--TextView large default white-->
+    <style name="TextViewWhiteLargeStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/WhiteTextDefaultColor</item>
+        <item name="android:textSize">@dimen/text_size_default_large</item>
+    </style>
+
+    <!--text view Small Default black-->
+    <style name="TextViewSmallStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/BlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
+    <!--text view Normal Theme color -->
     <style name="TextViewNormalThemeColorStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/ThemePrimaryColor</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--text view Normal off black -->
     <style name="TextViewNormalOffBlackStyle" parent="TextStyleBaseSolo">
         <item name="android:textColor">?attr/OffBlackTextDefault</item>
         <item name="android:textSize">@dimen/text_size_default_normal</item>
     </style>
 
+    <!--text view Small off black -->
+    <style name="TextViewSmallOffBlackStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/OffBlackTextDefault</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
 
+    <!--textview small Dark gray-->
+    <style name="TextViewSmallDarkGrayStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/DarkGrayText</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
+    <!--textview Normal Dark gray-->
+    <style name="TextViewNormalDarkGrayStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/DarkGrayText</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+    <!--text view small blue link-->
+    <style name="TextViewSmallBlueLinkStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">?attr/BlueLinkTextColor</item>
+        <item name="android:textSize">@dimen/text_size_default_small</item>
+    </style>
+
+    <!-- TextView Large blue for Dialog action  -->
+    <style name="TextViewLargeBlueStyleDialog" parent="TextStyleBaseSolo">
+        <item name="android:textColor">@color/blueTextDialog</item>
+        <item name="android:textSize">@dimen/text_size_default_large</item>
+    </style>
+
+
+    <!--text view actional count-->
+    <style name="TextViewExtraSmallActionalCountStyle" parent="TextStyleBaseSolo">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_size_default_xsmall</item>
+    </style>
+
+
+    <!--*********************************DIALOG VIEW STYLES*******************************************-->
+    <!--Theme for DialogFragment-->
+    <style name="SoloDialogTheme" parent="@android:style/Theme">
+        <item name="android:windowBackground">@color/black_overlay</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+    <!--*********************************TEXT INPUT LAYOUT STYLES*******************************************-->
+
+    <!--TextInputLayout Theme -->
+    <style name="TextInputLayoutStyleDefault" parent="Widget.Design.TextInputLayout">
+        <item name="hintAnimationEnabled">true</item>
+        <item name="hintTextAppearance">@style/HintDefaultStyle</item>
+
+    </style>
+
+    <style name="HintDefaultStyle" parent="TextAppearance.Design.Hint">
+        <item name="android:textColor">?attr/LightGrayText</item>
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+    </style>
+
+    <style name="ErrorTextStyle" parent="TextAppearance.Design.Error">
+        <item name="android:textSize">@dimen/text_size_default_normal</item>
+        <item name="android:textColor">?attr/ErrorTextColor</item>
+    </style>
 </resources>

@@ -11,8 +11,16 @@
     <!--App colors-->
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
+    <color name="darker_gray">#ACACAC</color>
+    <color name="login_line">#c2c2c4</color>
 
     <!--DashBoard color-->
     <color name="dashboard_bg_color">#eeedee</color>
     <color name="selector_text_color">#6d6d6d</color>
+
+    <!--Dialog-->
+    <color name="blueTextDialog">#0079FF</color>
+    <!--Create Expense screen-->
+    <color name="grey_create_expense_receipt_background">#F7F8F9</color>
+    <color name="grey_create_expense_category_layout">#FBFCFC</color>
 </resources>

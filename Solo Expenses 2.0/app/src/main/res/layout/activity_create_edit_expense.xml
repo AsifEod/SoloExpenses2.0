@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.expenseondemand.soloexpenses.presentation.activity.expenseScreen.CreateEditExpenseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/topbar_layout"
+            layout="@layout/solo_topbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/topbar_layout"
+            android:background="@drawable/bottom_grey_border"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:padding="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv_category_label"
+                    style="@style/HintDefaultStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_category" />
+
+                <RelativeLayout
+                    android:id="@+id/select_category_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_category_label"
+                    android:layout_marginTop="@dimen/_4sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_category_icon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        app:srcCompat="@drawable/google_icon_vector" />
+
+                    <TextView
+                        android:id="@+id/tv_category_name"
+                        style="@style/TextViewNormalThemeColorStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_toEndOf="@+id/iv_category_icon"
+                        android:text="Category Name"
+                        android:textSize="@dimen/text_size_default_extra_large" />
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/right_arrow_icon_vector" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:background="@drawable/left_grey_border">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/iv_policy_violation"
+                        style="@style/ThemeIconColor"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        app:srcCompat="@drawable/expense_policy_icon_vector" />
+
+                    <TextView
+                        android:id="@+id/tv_policy_violation"
+                        style="@style/TextViewSmallBlueLinkStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_policy_violation"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/label_policy"
+                        android:textSize="@dimen/text_size_default_small" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_12sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <RelativeLayout
+                    android:id="@+id/left_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.65">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_date"
+                        style="@style/TextInputLayoutStyleDefault"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_grey_border"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/ErrorTextStyle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_date"
+                            style="@style/TextViewNormalThemeColorStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_minus12sdp"
+                            android:background="@null"
+                            android:drawableEnd="@drawable/calendar_icon_vector"
+                            android:hint="@string/label_date"
+                            android:paddingTop="@dimen/margin_between_text_and_hint"
+                            android:text="16-Jun-2019"
+                            android:textColorHint="?attr/LightGrayText"
+                            android:textSize="@dimen/text_size_default_large" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/til_date"
+                        android:layout_alignStart="@+id/til_date"
+                        android:layout_alignEnd="@+id/til_date"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <!-- Amount-->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/til_amount"
+                            style="@style/TextInputLayoutStyleDefault"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.6"
+                            android:background="@drawable/bottom_right_grey_border"
+                            android:paddingTop="@dimen/_10sdp"
+                            app:errorEnabled="true"
+                            app:errorTextAppearance="@style/ErrorTextStyle">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_amount"
+                                style="@style/TextViewNormalThemeColorStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_minus12sdp"
+                                android:background="@null"
+                                android:hint="@string/label_amount"
+                                android:inputType="numberDecimal"
+                                android:paddingTop="@dimen/margin_between_text_and_hint"
+                                android:text="4350.99"
+                                android:textColorHint="?attr/LightGrayText"
+                                android:textSize="@dimen/text_size_default_large" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--Currency-->
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.4"
+                            android:background="@drawable/bottom_grey_border">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_currency"
+                                style="@style/TextInputLayoutStyleDefault"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_toStartOf="@+id/right_arrow_currency"
+                                android:paddingStart="@dimen/_8sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                app:errorEnabled="true"
+                                app:errorTextAppearance="@style/ErrorTextStyle">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_currency"
+                                    style="@style/TextViewNormalThemeColorStyle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/_minus12sdp"
+                                    android:background="@null"
+                                    android:hint="@string/currency"
+                                    android:paddingTop="@dimen/margin_between_text_and_hint"
+                                    android:text="INR"
+                                    android:textColorHint="?attr/LightGrayText"
+                                    android:textSize="@dimen/text_size_default_large" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <ImageView
+                                android:id="@+id/right_arrow_currency"
+                                android:layout_width="@dimen/_16sdp"
+                                android:layout_height="@dimen/_16sdp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentBottom="true"
+                                android:paddingEnd="@dimen/_minus4sdp"
+                                android:textSize="@dimen/text_size_default_large"
+                                app:srcCompat="@drawable/right_arrow_icon_vector"
+
+                                />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.35">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/create_expense_camera_background">
+
+                        <ImageView
+                            style="@style/ThemeIconColor"
+                            android:layout_width="@dimen/_36sdp"
+                            android:layout_height="@dimen/_36sdp"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/add_receipt_camera_icon_vector" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                style="@style/ThemeIconColor"
+                android:layout_width="@dimen/dashboard_row_icon_size"
+                android:layout_height="@dimen/dashboard_row_icon_size"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@null"
+                app:srcCompat="@drawable/create_expense_vector" />
+
+
+            <TextView
+                android:id="@+id/tv_menu_label"
+                style="@style/TextViewSmallOffBlackStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_icon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_1sdp"
+                tools:text="Expense" />
+
+            <TextView
+                android:id="@+id/tv_action_count"
+                style="@style/TextViewExtraSmallActionalCountStyle"
+                android:layout_width="@dimen/actionable_count_icon_size"
+                android:layout_height="@dimen/actionable_count_icon_size"
+                android:layout_toEndOf="@+id/iv_icon"
+                android:background="@drawable/actional_count_circle"
+                android:gravity="center"
+                tools:text="1" />
+
+
+        </RelativeLayout>
+
+
+
+</FrameLayout>
